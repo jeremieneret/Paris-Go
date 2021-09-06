@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Lobster&family=Rampart+One&display=swap");
 body {
-  background: #e1f0ee;
+  background: #dce2e7;
   width: 100vw;
   height: 100vh;
 }
@@ -86,9 +86,10 @@ body {
 }
 
 .card {
+  margin-top: 3%;
   display: flex;
   background: #faf1f2;
-  width: 80vw;
+  width: 1170px;
   height: 230px;
   border-radius: 15px;
   box-shadow: 10px 15px 26px -10px rgba(120, 135, 166, 0.62);
@@ -104,14 +105,24 @@ body {
   text-transform: lowercase;
   font-family: "Lobster", cursive;
   font-style: italic;
-  color: #83888a;
+  color: #7a8c9b;
+}
+.card .title-favori__ctnr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .card .title {
   font-family: "Rampart One", cursive;
-  color: #2a2e31;
+  color: #2c6da0;
+  cursor: pointer;
+}
+.card .favori {
+  height: 40px;
+  width: auto;
 }
 .card .date {
-  color: #83888a;
+  color: #7a8c9b;
   font-weight: 700;
   margin-bottom: 12px;
 }
@@ -119,7 +130,7 @@ body {
   padding: 2%;
 }
 .card .text .description {
-  color: #3f464b;
+  color: #3c5d75;
   height: 50%;
   overflow: scroll;
   cursor: ns-resize;

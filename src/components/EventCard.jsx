@@ -1,5 +1,7 @@
 import { Fragment, React, useEffect, useState } from 'react';
 import axios from 'axios';
+// import coeur from '../assets/coeur.png';
+import coeur_inactive from '../assets/coeur_inactive.png';
 
 
 //This function will fetch general infos about parisian events, to display them in a card.
@@ -46,7 +48,10 @@ function EventCard() {
                 <img className='cover' src={cover} alt='cover' />
                 <div className='text'>
                     <p className='tag'>#{tag}</p>
-                    <h1 className='title'>{title}</h1>
+                    <div className='title-favori__ctnr'>
+                        <h1 className='title'>{title}</h1>
+                        <img className='favori' src={coeur_inactive} alt='favori' />
+                    </div>
                     <p className='date'>{date}</p>
                     <p className="description">{description}</p>
                 </div>
