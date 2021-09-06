@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Lobster&family=Rampart+One&display=swap");
 body {
   background: #e1f0ee;
   width: 100vw;
@@ -89,26 +89,39 @@ body {
   display: flex;
   background: #faf1f2;
   width: 80vw;
-  height: 252px;
-  border-radius: 20px;
+  height: 230px;
+  border-radius: 15px;
+  box-shadow: 10px 15px 26px -10px rgba(120, 135, 166, 0.62);
+  -webkit-box-shadow: 10px 15px 26px -10px rgba(120, 135, 166, 0.62);
+  -moz-box-shadow: 10px 15px 26px -10px rgba(120, 135, 166, 0.62);
 }
 .card img {
   width: auto;
   height: 100%;
-  border-radius: 20px 0 0 20px;
+  border-radius: 15px 0 0 15px;
 }
 .card .tag {
   text-transform: lowercase;
+  font-family: "Lobster", cursive;
   font-style: italic;
+  color: #83888a;
 }
 .card .title {
-  font-family: "Gowun Batang", serif;
+  font-family: "Rampart One", cursive;
+  color: #2a2e31;
+}
+.card .date {
+  color: #83888a;
+  font-weight: 700;
+  margin-bottom: 12px;
 }
 .card .text {
   padding: 2%;
 }
 .card .text .description {
-  height: 55%;
+  color: #3f464b;
+  height: 50%;
   overflow: scroll;
   cursor: ns-resize;
+  line-height: 140%;
 }/*# sourceMappingURL=style.css.map */

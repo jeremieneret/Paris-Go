@@ -1,4 +1,4 @@
-@use '../tools/fonts' as *;
+@use '../tools' as *;
 
 body {
     display: flex;
@@ -9,26 +9,39 @@ body {
     display: flex;
     background: rgb(250, 241, 242);
     width: 80vw;
-    height: 252px;
-    border-radius: 20px;
+    height: 230px;
+    border-radius: 15px;
+    @include shadow;
     img {
         width: auto;
         height: 100%;
-        border-radius: 20px 0 0 20px;
+        border-radius: 15px 0 0 15px;
     }
     .tag {
         text-transform: lowercase;
+        font-family: $lobster;
         font-style: italic;
+        color: #83888a
+
     }
     .title {
-        font-family: $gowun;
+        font-family: $rampart;
+        color: #2a2e31
+
+    }
+    .date {
+        color: #83888a;
+        font-weight: 700;
+        margin-bottom: 12px;
     }
     .text {
         padding: 2%;
         .description {
-            height: 55%;
+            color: #3f464b;
+            height: 50%;
             overflow: scroll;
             cursor: ns-resize;
+            line-height: 140%;
         }
     }
 
