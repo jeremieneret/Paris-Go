@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Lato&display=swap");
+body {
+  background: #e1f0ee;
+  width: 100vw;
+  height: 100vh;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+}
+
+fieldset,
+button {
+  border: none;
+  background: none;
+}
+
+/* inputs */
+input,
+button,
+textarea,
+select {
+  font-style: inherit;
+  -webkit-padding-start: 0;
+  align-items: flex-start;
+  -webkit-appearance: none;
+  outline: none;
+  margin: 0;
+  border: none;
+}
+
+textarea {
+  resize: none;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input[type=submit],
+button {
+  cursor: pointer;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: "Lato", sans-serif;
+}
+
+.card {
+  display: flex;
+  background: #faf1f2;
+  width: 80vw;
+  height: 252px;
+  border-radius: 20px;
+}
+.card img {
+  width: auto;
+  height: 100%;
+  border-radius: 20px 0 0 20px;
+}
+.card .tag {
+  text-transform: lowercase;
+  font-style: italic;
+}
+.card .title {
+  font-family: "Gowun Batang", serif;
+}
+.card .text {
+  padding: 2%;
+}
+.card .text .description {
+  height: 55%;
+  overflow: scroll;
+  cursor: ns-resize;
+}/*# sourceMappingURL=style.css.map */
