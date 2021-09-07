@@ -1,5 +1,5 @@
 import { React } from 'react';
-import EventCard from './components/EventCard';
+import DisplayEventCards from './components/DisplayEventCards';
 
 import './style/CSS/style.css'
 
@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <main>
-        <EventCard />
+        <DisplayEventCards />
       </main>
     </div>
   );
