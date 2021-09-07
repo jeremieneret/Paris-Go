@@ -96,18 +96,17 @@ body {
   -webkit-box-shadow: 10px 15px 26px -10px rgba(120, 135, 166, 0.62);
   -moz-box-shadow: 10px 15px 26px -10px rgba(120, 135, 166, 0.62);
 }
-.card img {
-  width: auto;
+.card .color {
+  width: 2%;
   height: 100%;
-  border-radius: 15px 0 0 15px;
 }
-.card .tag {
+.card .tags {
   text-transform: lowercase;
   font-family: "Lobster", cursive;
   font-style: italic;
   color: #7a8c9b;
 }
-.card .title-favori__ctnr {
+.card .favori__ctnr {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -128,6 +127,7 @@ body {
 }
 .card .text {
   padding: 2%;
+  width: 100%;
 }
 .card .text .description {
   color: #3c5d75;

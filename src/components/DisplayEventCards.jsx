@@ -2,6 +2,8 @@ import { Fragment, React, useEffect, useState } from 'react';
 import axios from 'axios';
 import EventCard from './EventCard';
 
+
+
 export default function DisplayEventCards() {
     const [data, setData] = useState();
 
@@ -20,7 +22,7 @@ export default function DisplayEventCards() {
         <Fragment>
             <ul>
                 {data?.map((event, i) => {
-                    console.log(event.fields)
+
                     return (
                         <li key={i}>
                             <EventCard
@@ -31,8 +33,9 @@ export default function DisplayEventCards() {
                                     description: event.fields.description,
                                     date: event.fields.date_description,
                                     tags: event.fields.tags,
+                                    lead_text: event.fields.lead_text
                                 }}
-                            />
+                            ></EventCard>
 
                         </li>
                     )

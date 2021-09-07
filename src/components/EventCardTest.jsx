@@ -56,18 +56,18 @@ const EventCard = () => {
         <Fragment>
             <ul>
                 {dataRecords?.map((i) => (
-                    <li key= {i}>
+                    <li key={i}>
                         <div className='card'>
-                            <img className='cover' src={cover} alt='cover' />
                             <div className='text'>
                                 <p className='tag'>#{tag}</p>
                                 <div className='title-favori__ctnr'>
-                                    <h1 className='title'>{title}</h1>
+                                    {/* <h1 className='title'>{title}</h1> */}
                                     <img className='favori' src={coeur_inactive} alt='favori' />
                                 </div>
                                 <p className='date'>{date}</p>
                                 <p className="description">{description}</p>
                             </div>
+                            {/* <img className='cover' src={cover} alt='cover' /> */}
                         </div>
                     </li>
                 ))}

@@ -13,10 +13,9 @@ body {
     height: 230px;
     border-radius: 15px;
     @include shadow;
-    img {
-        width: auto;
+    .color {
+        width: 2%;
         height: 100%;
-        border-radius: 15px 0 0 15px;
     }
     .tags {
         text-transform: lowercase;
@@ -25,7 +24,7 @@ body {
         color: #7a8c9b
 
     }
-    .title-favori__ctnr {
+    .favori__ctnr {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -46,6 +45,7 @@ body {
     }
     .text {
         padding: 2%;
+        width: 100%;
         .description {
             color: #3c5d75;
             height: 50%;
