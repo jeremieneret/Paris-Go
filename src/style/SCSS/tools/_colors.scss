@@ -5,16 +5,21 @@
 }
 
 .pink,
+.orange,
 .yellow,
 .aquamarine,
 .blue,
 .violet {
     width: 2%;
-    height: 100%;
+    height: auto;
+    border-radius: 15px 0 0 15px;
 }
 
 .pink {
     background: #F7AAC6;
+}
+.orange {
+    background: #FFBE96;
 }
 .yellow {
     background: #FCFFA4;

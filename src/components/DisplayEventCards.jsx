@@ -10,7 +10,7 @@ export default function DisplayEventCards() {
     useEffect(() => {
         const fetchData = async () => {
             const result = await axios(
-                'https://opendata.paris.fr/api/records/1.0/search/?dataset=que-faire-a-paris-&q=&facet=category&facet=tags&facet=address_name&facet=address_zipcode&facet=address_city&facet=pmr&facet=blind&facet=deaf&facet=access_type&facet=price_type&facet=description'
+                'https://opendata.paris.fr/api/v2/catalog/datasets/que-faire-a-paris-/records/?search=danse&order_by=updated_at&limit=30'
             );
             setData(result.data.records);
         }
@@ -28,13 +28,13 @@ export default function DisplayEventCards() {
                             <EventCard
                                 event={{
                                     i: i,
-                                    id: event.fields.id,
-                                    title: event.fields.title,
-                                    cover: event.fields.cover_url,
-                                    description: event.fields.description,
-                                    date: event.fields.date_description,
-                                    tags: event.fields.tags,
-                                    lead_text: event.fields.lead_text
+                                    id: event.record.fields.id,
+                                    title: event.record.fields.title,
+                                    cover: event.record.fields.cover_url,
+                                    description: event.record.fields.description,
+                                    date: event.record.fields.date_description,
+                                    tags: event.record.fields.tags,
+                                    lead_text: event.record.fields.lead_text
                                 }}
                             ></EventCard>
 

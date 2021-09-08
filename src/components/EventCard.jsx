@@ -5,10 +5,12 @@ import DisplayColors from './DisplayColors';
 
 
 
-export default function EventCard({ event, color }) {
-
+export default function EventCard({ event }) {
+    
     return (
         <Fragment>
+            <div className="card-and-cover__ctnr">
+            <img className='cover' src={event.cover} alt="événement" />
             <div className='card'>
                 <DisplayColors
                     i={event.i}
@@ -22,6 +24,7 @@ export default function EventCard({ event, color }) {
                     <p className='date'>{parse(event.date)}</p>
                     <p className="description">{parse(event.lead_text)}</p>
                 </div>
+            </div>
             </div>
         </Fragment>
     )

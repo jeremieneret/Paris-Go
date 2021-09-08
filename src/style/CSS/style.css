@@ -6,16 +6,22 @@ body {
 }
 
 .pink,
+.orange,
 .yellow,
 .aquamarine,
 .blue,
 .violet {
   width: 2%;
-  height: 100%;
+  height: auto;
+  border-radius: 15px 0 0 15px;
 }
 
 .pink {
   background: #F7AAC6;
+}
+
+.orange {
+  background: #FFBE96;
 }
 
 .yellow {
@@ -114,12 +120,36 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-.card {
+.card-and-cover__ctnr {
+  display: flex;
   margin-top: 3%;
+  align-items: center;
+}
+
+.cover {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-right: 3%;
+  box-shadow: 10px 15px 26px -10px rgba(120, 135, 166, 0.62);
+  -webkit-box-shadow: 10px 15px 26px -10px rgba(120, 135, 166, 0.62);
+  -moz-box-shadow: 10px 15px 26px -10px rgba(120, 135, 166, 0.62);
+  border: solid 3px white;
+}
+
+.classe-test {
+  width: 270px;
+  height: 676px;
+}
+
+.test {
+  background-color: chartreuse;
+}
+
+.card {
   display: flex;
   background: #faf1f2;
   width: 1170px;
-  height: 230px;
   border-radius: 15px;
   box-shadow: 10px 15px 26px -10px rgba(120, 135, 166, 0.62);
   -webkit-box-shadow: 10px 15px 26px -10px rgba(120, 135, 166, 0.62);
