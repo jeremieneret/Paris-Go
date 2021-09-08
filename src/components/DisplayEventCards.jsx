@@ -27,6 +27,7 @@ export default function DisplayEventCards() {
                         <li key={i}>
                             <EventCard
                                 event={{
+                                    i: i,
                                     id: event.fields.id,
                                     title: event.fields.title,
                                     cover: event.fields.cover_url,

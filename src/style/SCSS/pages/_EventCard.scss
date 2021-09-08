@@ -13,10 +13,6 @@ body {
     height: 230px;
     border-radius: 15px;
     @include shadow;
-    .color {
-        width: 2%;
-        height: 100%;
-    }
     .tags {
         text-transform: lowercase;
         font-family: $lobster;

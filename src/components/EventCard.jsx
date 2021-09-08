@@ -6,11 +6,13 @@ import DisplayColors from './DisplayColors';
 
 
 export default function EventCard({ event, color }) {
-    
+
     return (
         <Fragment>
             <div className='card'>
-                <DisplayColors color={color} />
+                <DisplayColors
+                    i={event.i}
+                />
                 <div className='text'>
                     <div className='favori__ctnr'>
                         <p className='tags'>#{event.tags}</p>

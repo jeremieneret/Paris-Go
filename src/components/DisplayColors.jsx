@@ -1,29 +1,28 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 
 
-export default function DisplayColors() {
-    // const [color, setColor] = useState();
+export default function DisplayColors({ i }) {
+    const [color, setColor] = useState();
     const colors = [
-        { background: 'pink' },
-        { background: 'yellow' },
-        { background: 'aquamarine' }
+        'pink', 'yellow', 'aquamarine', 'blue', 'violet'
     ]
-    // useEffect(() => {
-    //     for (let i = 0; i < colors.length; i++) {
-    //         const element = colors[i];
-    //         setColor(element)
-    //     }
-    // }, [])
 
-    console.log(colors);
+
+    useEffect(() => {
+        const newColor = colors[i%5];
+        setColor(newColor)
+        console.log(i);
+    }, [])
+
+    // console.log(color);
     return (
 
         <Fragment>
-            {colors.map((color, i) => {
-                return (
-                    <div key={i} style={color} className='color'></div>
-                )
-            })}
+            {/* {colors.map((color, i) => {
+                return ( */}
+            <div key={i} className={color}></div>
+            {/* )
+            })} */}
 
 
 

@@ -5,6 +5,35 @@ body {
   height: 100vh;
 }
 
+.pink,
+.yellow,
+.aquamarine,
+.blue,
+.violet {
+  width: 2%;
+  height: 100%;
+}
+
+.pink {
+  background: #F7AAC6;
+}
+
+.yellow {
+  background: #FCFFA4;
+}
+
+.aquamarine {
+  background: #C2EEDC;
+}
+
+.blue {
+  background: #CFE7F5;
+}
+
+.violet {
+  background: #D6CFF5;
+}
+
 *,
 *:before,
 *:after {
@@ -95,10 +124,6 @@ body {
   box-shadow: 10px 15px 26px -10px rgba(120, 135, 166, 0.62);
   -webkit-box-shadow: 10px 15px 26px -10px rgba(120, 135, 166, 0.62);
   -moz-box-shadow: 10px 15px 26px -10px rgba(120, 135, 166, 0.62);
-}
-.card .color {
-  width: 2%;
-  height: 100%;
 }
 .card .tags {
   text-transform: lowercase;
