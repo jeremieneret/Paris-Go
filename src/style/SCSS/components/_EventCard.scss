@@ -3,7 +3,6 @@
 body {
     display: flex;
     justify-content: center;
-    font-family: $lato;
 }
 
 
@@ -11,6 +10,7 @@ body {
     display: flex;
     margin-top: 3%;
     align-items: center;
+    justify-content: center;
 
 }
 .cover {
@@ -20,22 +20,12 @@ body {
     margin-right: 3%;
     @include shadow;
     border: solid 3px white;
-
-}
-.classe-test {
-    width: 270px;
-    height: 676px;
-}
-
-.test {
-    background-color: chartreuse;
 }
 
 .card {
+    width: 100%;
     display: flex;
     background: rgb(250, 241, 242);
-    width: 1170px;
-    // height: 250px;
     border-radius: 15px;
     @include shadow;
     .tags {

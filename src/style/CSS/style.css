@@ -1,8 +1,32 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Lobster&family=Rampart+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?&display=swap");
 body {
   background: #dce2e7;
   width: 100vw;
   height: 100vh;
+  font-family: "Lato", sans-serif;
+}
+body::before {
+  content: "";
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: url("../../assets/bckgrnd.jpg");
+  background-size: cover;
+  filter: blur(5px);
+  z-index: -1;
+  /* Keep the background behind the content */
+  /* pour Chrome et Safari */
+  /* pour Firefox */
+  /* pour Opera */
+  background-size: cover;
+  /* version standardisée */
+}
+
+main {
+  width: 80%;
+  margin: 0 auto;
 }
 
 .pink,
@@ -117,13 +141,13 @@ button {
 body {
   display: flex;
   justify-content: center;
-  font-family: "Lato", sans-serif;
 }
 
 .card-and-cover__ctnr {
   display: flex;
   margin-top: 3%;
   align-items: center;
+  justify-content: center;
 }
 
 .cover {
@@ -137,19 +161,10 @@ body {
   border: solid 3px white;
 }
 
-.classe-test {
-  width: 270px;
-  height: 676px;
-}
-
-.test {
-  background-color: chartreuse;
-}
-
 .card {
+  width: 100%;
   display: flex;
   background: #faf1f2;
-  width: 1170px;
   border-radius: 15px;
   box-shadow: 10px 15px 26px -10px rgba(120, 135, 166, 0.62);
   -webkit-box-shadow: 10px 15px 26px -10px rgba(120, 135, 166, 0.62);
@@ -190,4 +205,63 @@ body {
   overflow: scroll;
   cursor: ns-resize;
   line-height: 140%;
+}
+
+.presentation,
+.actu-title {
+  color: white;
+  padding: 3% 5%;
+  border-radius: 15px;
+  box-shadow: 10px 15px 26px -10px rgba(120, 135, 166, 0.62);
+  -webkit-box-shadow: 10px 15px 26px -10px rgba(120, 135, 166, 0.62);
+  -moz-box-shadow: 10px 15px 26px -10px rgba(120, 135, 166, 0.62);
+  margin: 3% 0;
+  line-height: 230%;
+}
+.presentation h1,
+.actu-title h1 {
+  font-family: "Lobster", cursive;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.presentation {
+  background: rgba(85, 51, 195, 0.4);
+}
+
+.actu-title {
+  background: linear-gradient(90deg, #FFBE96 10%, rgba(233, 105, 1, 0.4) 100%);
+}
+
+nav {
+  width: 100vw;
+  display: flex;
+  padding: 3% 5%;
+  background: linear-gradient(90deg, rgba(51, 162, 195, 0.7) 50%, rgba(231, 90, 156, 0.7) 100%);
+  box-shadow: 10px 15px 26px -10px rgba(160, 177, 212, 0.404);
+  -webkit-box-shadow: 10px 15px 26px -10px rgba(160, 177, 212, 0.404);
+  -moz-box-shadow: 10px 15px 26px -10px rgba(160, 177, 212, 0.404);
+  margin-bottom: 3%;
+  border-radius: 0 0 15px 15px;
+}
+nav h1 {
+  white-space: nowrap;
+  font-family: "Rampart One", cursive;
+  color: white;
+  font-size: 60px;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+nav ul li {
+  margin-left: 30px;
+}
+nav ul li button {
+  font-size: large;
+  color: white;
+  font-weight: 700;
+  font-family: "Lato", sans-serif;
 }/*# sourceMappingURL=style.css.map */

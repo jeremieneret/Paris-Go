@@ -8,19 +8,19 @@ export default function DisplayEventCards() {
     const [data, setData] = useState();
 
     useEffect(() => {
-        const fetchData = async () => {
+        const onSearchEvent = async () => {
             const result = await axios(
-                'https://opendata.paris.fr/api/v2/catalog/datasets/que-faire-a-paris-/records/?search=danse&order_by=updated_at&limit=30'
+                'https://opendata.paris.fr/api/v2/catalog/datasets/que-faire-a-paris-/records/?search=tout&order_by=updated_at&limit=30'
             );
             setData(result.data.records);
         }
-        fetchData();
+        onSearchEvent();
     }, [])
 
     console.log(data);
     return (
         <Fragment>
-            <ul>
+            <ul className='display-event-cards'>
                 {data?.map((event, i) => {
 
                     return (

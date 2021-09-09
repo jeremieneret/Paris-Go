@@ -3,6 +3,11 @@
     -webkit-box-shadow: 10px 15px 26px -10px rgba(120,135,166,0.62);
     -moz-box-shadow: 10px 15px 26px -10px rgba(120,135,166,0.62);
 }
+@mixin shadowNavbar {
+    box-shadow: 10px 15px 26px -10px rgba(160, 177, 212, 0.404);
+    -webkit-box-shadow: 10px 15px 26px -10px rgba(160, 177, 212, 0.404);
+    -moz-box-shadow: 10px 15px 26px -10px rgba(160, 177, 212, 0.404);
+}
 
 .pink,
 .orange,
