@@ -14,7 +14,7 @@ export default function Navbar() {
                             <button onClick={() => { history.push('/') }}>Accueil</button>
                         </li>
                         <li>
-                            <button onClick={() => { history.push('/SearchEvent') }}>Recherche</button>
+                            <button onClick={() => { history.push('/DisplayEventCards') }}>Recherche</button>
                         </li>
                         <li>
                             <button onClick={() => { history.push('/Favorites') }}>Favoris</button>

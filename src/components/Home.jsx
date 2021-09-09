@@ -1,5 +1,5 @@
 import { Fragment, React } from 'react';
-import DisplayEventCards from './DisplayEventCards';
+// import DisplayEventCards from './DisplayEventCards';
 
 export default function Home() {
     return (
@@ -21,7 +21,7 @@ export default function Home() {
                 </div>
                 <h1 className='actu-title'>C'est tout frais :</h1>
             </div>
-            <DisplayEventCards />
+            {/* <DisplayEventCards /> */}
         </Fragment>
     )
 }

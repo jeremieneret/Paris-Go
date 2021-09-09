@@ -1,5 +1,4 @@
-import { Fragment, React } from 'react';
-import { useState } from 'react/cjs/react.development';
+import { Fragment, React, useState } from 'react';
 import DisplayEventCards from './DisplayEventCards';
 
 function SearchEvent(props) {

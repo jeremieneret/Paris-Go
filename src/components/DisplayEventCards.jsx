@@ -5,10 +5,13 @@ import EventCard from './EventCard';
 
 
 export default function DisplayEventCards() {
+
+    const [searchInputText, setSearchInputText] = useState();
     const [data, setData] = useState();
-    let url = 'https://opendata.paris.fr/api/v2/catalog/datasets/que-faire-a-paris-/records/?search=tout&order_by=updated_at&limit=1';
+    let url = `https://opendata.paris.fr/api/v2/catalog/datasets/que-faire-a-paris-/records/?search=${searchInputText}&order_by=updated_at&limit=10`;
 
     useEffect(() => {
+
         const onSearchEvent = async () => {
             const result = await axios(
                 url
@@ -16,11 +19,19 @@ export default function DisplayEventCards() {
             setData(result.data.records);
         }
         onSearchEvent();
-    }, [])
+
+    }, [url, searchInputText])
 
     console.log(data);
     return (
         <Fragment>
+            <input
+                className='search-input'
+                onChange={e => setSearchInputText(e.target.value)}
+                value={searchInputText}
+                type='text'
+                placeholder="Tapez ici votre recherche d'événement"
+            />
             <ul className='display-event-cards'>
                 {data?.map((event, i) => {
 
@@ -38,7 +49,6 @@ export default function DisplayEventCards() {
                                     lead_text: event.record.fields.lead_text
                                 }}
                             ></EventCard>
-
                         </li>
                     )
                 })}
