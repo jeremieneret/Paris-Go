@@ -1,5 +1,6 @@
 import { Fragment, React } from 'react';
 import { useState } from 'react/cjs/react.development';
+import DisplayEventCards from './DisplayEventCards';
 
 function SearchEvent(props) {
     const { onSearchEvent } = props;
@@ -27,6 +28,7 @@ function SearchEvent(props) {
                 type='text'
                 placeholder='Rechercher un événement'
             />
+            <DisplayEventCards />
         </Fragment>
     )
 }

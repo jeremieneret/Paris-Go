@@ -207,42 +207,63 @@ body {
   line-height: 140%;
 }
 
-.presentation,
-.actu-title {
-  color: white;
+.home h1 {
+  font-family: "Lobster", cursive;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+.home .presentation__ctnr {
+  display: flex;
+}
+.home .presentation,
+.home .actu-title {
   padding: 3% 5%;
   border-radius: 15px;
   box-shadow: 10px 15px 26px -10px rgba(120, 135, 166, 0.62);
   -webkit-box-shadow: 10px 15px 26px -10px rgba(120, 135, 166, 0.62);
   -moz-box-shadow: 10px 15px 26px -10px rgba(120, 135, 166, 0.62);
-  margin: 3% 0;
-  line-height: 230%;
+  line-height: 200%;
 }
-.presentation h1,
-.actu-title h1 {
-  font-family: "Lobster", cursive;
-  font-size: 40px;
-  margin-bottom: 30px;
+.home .presentation {
+  color: white;
+  margin-bottom: 7vh;
+}
+.home .presentation:nth-of-type(1) {
+  background: rgba(166, 219, 250, 0.8);
+}
+.home .presentation:nth-of-type(2) {
+  background: rgba(132, 106, 246, 0.3);
+}
+.home .presentation:nth-of-type(3) {
+  background: rgba(247, 170, 198, 0.7);
+}
+.home .presentation:nth-of-type(4) {
+  background: rgba(255, 190, 150, 0.7);
+}
+.home .presentation:not(:nth-of-type(1)) {
+  margin-left: 2%;
+}
+.home .actu-title {
+  color: rgba(51, 162, 195, 0.7);
+  background: linear-gradient(90deg, #efff96 10%, rgba(233, 105, 1, 0.4) 100%);
 }
 
-.presentation {
-  background: rgba(85, 51, 195, 0.4);
-}
-
-.actu-title {
-  background: linear-gradient(90deg, #FFBE96 10%, rgba(233, 105, 1, 0.4) 100%);
+.nav-content {
+  width: 80%;
+  display: flex;
 }
 
 nav {
   width: 100vw;
   display: flex;
-  padding: 3% 5%;
-  background: linear-gradient(90deg, rgba(51, 162, 195, 0.7) 50%, rgba(231, 90, 156, 0.7) 100%);
+  justify-content: center;
+  padding: 3% 0;
+  background: linear-gradient(90deg, rgba(51, 162, 195, 0.7) 65%, rgba(231, 90, 156, 0.7) 100%);
   box-shadow: 10px 15px 26px -10px rgba(160, 177, 212, 0.404);
   -webkit-box-shadow: 10px 15px 26px -10px rgba(160, 177, 212, 0.404);
   -moz-box-shadow: 10px 15px 26px -10px rgba(160, 177, 212, 0.404);
-  margin-bottom: 3%;
-  border-radius: 0 0 15px 15px;
+  margin-bottom: 7vh;
+  border-radius: 0 0 60px 60px;
 }
 nav h1 {
   white-space: nowrap;
@@ -264,4 +285,10 @@ nav ul li button {
   color: white;
   font-weight: 700;
   font-family: "Lato", sans-serif;
+}
+nav button {
+  transition: transform 0.3s;
+}
+nav button:hover {
+  transform: scale(1.1);
 }/*# sourceMappingURL=style.css.map */
