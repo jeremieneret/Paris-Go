@@ -14,14 +14,16 @@ function App() {
   return (
     <Fragment>
       <Router>
-        <Navbar />
-        <Switch>
-          <main>
-            <Route exact path='/' component={Home} />
-            {/* <Route path='/SearchEvent' component={SearchEvent} /> */}
-            <Route path='/DisplayEventCards' component={DisplayEventCards} />
-          </main>
-        </Switch>
+        <div id="root">
+          <Navbar />
+          <Switch>
+            <main>
+              <Route exact path='/' component={Home} />
+              {/* <Route path='/SearchEvent' component={SearchEvent} /> */}
+              <Route path='/DisplayEventCards' component={DisplayEventCards} />
+            </main>
+          </Switch>
+        </div>
       </Router>
     </Fragment>
   );
