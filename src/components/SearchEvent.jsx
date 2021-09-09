@@ -26,7 +26,7 @@ function SearchEvent(props) {
                 onKeyPress={handleEnterKeyPressed}
                 value={searchInputText}
                 type='text'
-                placeholder='Rechercher un événement'
+                placeholder="Tapez ici votre recherche d'événement"
             />
             <DisplayEventCards />
         </Fragment>

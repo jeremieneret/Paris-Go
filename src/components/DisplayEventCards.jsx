@@ -6,11 +6,12 @@ import EventCard from './EventCard';
 
 export default function DisplayEventCards() {
     const [data, setData] = useState();
+    let url = 'https://opendata.paris.fr/api/v2/catalog/datasets/que-faire-a-paris-/records/?search=tout&order_by=updated_at&limit=1';
 
     useEffect(() => {
         const onSearchEvent = async () => {
             const result = await axios(
-                'https://opendata.paris.fr/api/v2/catalog/datasets/que-faire-a-paris-/records/?search=tout&order_by=updated_at&limit=30'
+                url
             );
             setData(result.data.records);
         }

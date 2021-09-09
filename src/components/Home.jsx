@@ -10,7 +10,7 @@ export default function Home() {
                         <h1>Trouvez ici vos meilleures idées de sorties !</h1>
                     </div>
                     <div className="presentation">
-                        <h2>En consultant les dernières actualités ci-dessous, ou en utilisant la page Recherche.</h2>
+                        <h2>Consultez les toutes dernières actualités ci-dessous, ou en utilisez la page Recherche, pour une recherche d'événement plus spécifique.</h2>
                     </div>
                     <div className="presentation">
                         <h2>Constituez votre carnet de sorties en cliquant sur les coeurs et retrouvez votre liste dans la page Favoris !</h2>
