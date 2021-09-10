@@ -7,13 +7,13 @@ export default function Home() {
             <div className="home">
                 <div className="presentation__ctnr">
                     <div className="presentation">
-                        <h1>Trouvez ici vos meilleures idées de sorties !</h1>
+                        <h1>À toi les meilleures idées de sorties !</h1>
                     </div>
                     <div className="presentation">
-                        <h2>Consultez les toutes dernières actualités ci-dessous, ou en utilisez la page Recherche, pour une recherche d'événement plus spécifique.</h2>
+                        <h2>Consulte les toutes dernières actualités ci-dessous, ou bien utilise la page Recherche, pour une recherche d'événement plus spécifique.</h2>
                     </div>
                     <div className="presentation">
-                        <h2>Constituez votre carnet de sorties en cliquant sur les coeurs et retrouvez votre liste dans la page Favoris !</h2>
+                        <h2>Constitue ton carnet de sorties en cliquant sur les coeurs et retrouve ta liste dans la page Favoris !</h2>
                     </div>
                     <div className="presentation">
                         <h2>Allez, go !</h2>

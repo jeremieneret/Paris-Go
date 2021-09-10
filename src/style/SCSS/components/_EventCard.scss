@@ -20,6 +20,11 @@ body {
     margin-right: 3%;
     @include shadow;
     border: solid 3px white;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+        transform: scale(1.05)
+    }
 }
 
 .card {
@@ -44,10 +49,21 @@ body {
         font-family: $rampart;
         color: #2c6da0;
         cursor: pointer;
+        transition: all 0.3s;
+        &:hover {
+            color: #ffa36b;
+            transform: scale(1.01)
+        }
     }
     .favori {
         height: 40px;
         width: auto;
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover {
+            transform: scale(1.12)
+        }
+
     }
     .date {
         color: #7a8c9b;

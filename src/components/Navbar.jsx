@@ -11,13 +11,13 @@ export default function Navbar() {
                     <h1>PARIS GO</h1>
                     <ul>
                         <li>
-                            <button onClick={() => { history.push('/') }}>Accueil</button>
+                            <button onClick={() => { history.push('/') }}>ACCUEIL</button>
                         </li>
                         <li>
-                            <button onClick={() => { history.push('/DisplayEventCards') }}>Recherche</button>
+                            <button onClick={() => { history.push('/DisplayEventCards') }}>RECHERCHE</button>
                         </li>
                         <li>
-                            <button onClick={() => { history.push('/Favorites') }}>Favoris</button>
+                            <button onClick={() => { history.push('/Favorites') }}>FAVORIS</button>
                         </li>
                     </ul>
                 </div>

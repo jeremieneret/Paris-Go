@@ -2,24 +2,20 @@ import { Fragment, React, useEffect, useState } from 'react';
 import axios from 'axios';
 import EventCard from './EventCard';
 import Modal from 'react-modal';
+import { customStyles } from '../tools/utils';
+import search from '../assets/search.png';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
-const customStyles = {
-    content: {
-        top: '50%',
-        left: '50%',
-        right: 'auto',
-        bottom: 'auto',
-        marginRight: '-50%',
-        transform: 'translate(-50%, -50%)',
-    },
-};
+
+
 
 Modal.setAppElement('#root');
 
 
 
 
-export default function DisplayEventCards() {
+export default function DisplayEventCards({ props }) {
 
     const [searchInputText, setSearchInputText] = useState();
     const [data, setData] = useState();
@@ -27,12 +23,11 @@ export default function DisplayEventCards() {
 
     const [modalIsOpen, setIsOpen] = useState(false);
 
-    function openModal() {
+    const openModal = () => {
         setIsOpen(true);
     }
 
-
-    function closeModal() {
+    const closeModal = () => {
         setIsOpen(false);
     }
 
@@ -51,13 +46,33 @@ export default function DisplayEventCards() {
     console.log(data);
     return (
         <Fragment>
+            <div className="presentation__ctnr">
+                <div className="presentation">
+                    <h1>Écris dans la barre ci-dessous pour rechercher un événement.</h1>
+                </div>
+                <div className="presentation">
+                    <h2>Tape une requête précise...</h2>
+                </div>
+                <div className="presentation">
+                    <h2>ou laisse libre-court à ton inspiration !</h2>
+                </div>
+                <div className="presentation">
+                    <h2>La barre est sympa, elle te donne des exemples.</h2>
+                </div>
+            </div>
+
+            <div className="search-input__ctnr">
+            <img className='search-icon' src={search} alt="icone de recherche" />
             <input
                 className='search-input'
                 onChange={e => setSearchInputText(e.target.value)}
                 value={searchInputText}
                 type='text'
-                placeholder="Tapez ici votre recherche d'événement"
+                placeholder="expo, Paris 15e, Gaîté Lyrique, féminisme..."
             />
+            </div>
+
+
             <ul className='display-event-cards'>
                 {data?.map((event, i) => {
 
@@ -73,7 +88,6 @@ export default function DisplayEventCards() {
                                     date: event.record.fields.date_description,
                                     tags: event.record.fields.tags,
                                     lead_text: event.record.fields.lead_text,
-                                    click: { openModal }
                                 }}
                             ></EventCard>
                         </li>
@@ -87,7 +101,7 @@ export default function DisplayEventCards() {
                 style={customStyles}
                 contentLabel=""
             >
-                <button onClick={closeModal}>X</button>
+                <button onClick={closeModal}>retour</button>
                 <div>I am a modal</div>
 
             </Modal>

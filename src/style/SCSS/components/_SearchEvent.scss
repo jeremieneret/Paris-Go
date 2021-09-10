@@ -1,15 +1,25 @@
 @use '../tools/' as *;
 
-.search-input {
+.search-input__ctnr {
+    display: flex;
     padding: 3% 5%;
-    border-radius: 10px;
-    background: rgba($color: #ffffff, $alpha: 0.6);
+    border-radius: 20px;
+    background: rgba($color: #ffffff, $alpha: 0.8);
     width: 100%;
-    font-size: 30px;
-    color: rgb(255, 163, 179);
     margin-bottom: 3vh;
     @include shadow;
-    &::placeholder {
-        color: #6688a3;
+    .search-icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 30px;
+    }
+    .search-input {
+        background: transparent;
+        font-size: 30px;
+        color: rgb(255, 163, 179);
+        width: 100%;
+        &::placeholder {
+            color: #7cb5e7;
+        }
     }
 }

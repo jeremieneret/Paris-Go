@@ -1,33 +1,25 @@
 import { Fragment, React, useState } from 'react';
 import DisplayEventCards from './DisplayEventCards';
 
-function SearchEvent(props) {
-    const { onSearchEvent } = props;
+function SearchEvent() {
 
     const [searchInputText, setSearchInputText] = useState();
 
-    const handleInput = (e) => {
-        const inputText = e.target.value;
-        setSearchInputText(inputText)
-    }
-    const handleEnterKeyPressed = (e) => {
-        if (e.key === 'enter') {
-            onSearchEvent(searchInputText)
-        }
-    }
 
-
-    return(
+    return (
         <Fragment>
-            <input 
+            <input
                 className='search-input'
-                onChange={handleInput}
-                onKeyPress={handleEnterKeyPressed}
+                onChange={e => setSearchInputText(e.target.value)}
                 value={searchInputText}
                 type='text'
-                placeholder="Tapez ici votre recherche d'événement"
+                placeholder="Exemples : expo, Paris 15e, Gaîté Lyrique, féminisme..."
             />
-            <DisplayEventCards />
+            <DisplayEventCards
+
+                search= {searchInputText}
+
+            />
         </Fragment>
     )
 }
