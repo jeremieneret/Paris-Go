@@ -190,6 +190,7 @@ body {
   color: #2c6da0;
   cursor: pointer;
   transition: all 0.3s;
+  text-align: start;
 }
 .card .title:hover {
   color: #ffa36b;
