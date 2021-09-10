@@ -1,10 +1,10 @@
 import { Fragment, React } from 'react';
-// import DisplayEventCards from './DisplayEventCards';
 
-export default function Home() {
+
+const Home = () => {
     return (
         <Fragment>
-            <div className="home">
+            <main className="home">
                 <div className="presentation__ctnr">
                     <div className="presentation">
                         <h1>À toi les meilleures idées de sorties !</h1>
@@ -20,8 +20,9 @@ export default function Home() {
                     </div>
                 </div>
                 <h1 className='actu-title'>C'est tout frais :</h1>
-            </div>
-            {/* <DisplayEventCards /> */}
+            </main>
         </Fragment>
     )
 }
+
+export default Home;

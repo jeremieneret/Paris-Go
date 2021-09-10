@@ -11,10 +11,10 @@ export default function Navbar() {
                     <h1>PARIS GO</h1>
                     <ul>
                         <li>
-                            <button onClick={() => { history.push('/') }}>ACCUEIL</button>
+                            <button onClick={() => { history.push('/') }}>ACTU</button>
                         </li>
                         <li>
-                            <button onClick={() => { history.push('/DisplayEventCards') }}>RECHERCHE</button>
+                            <button onClick={() => { history.push('/SearchEvent') }}>RECHERCHE</button>
                         </li>
                         <li>
                             <button onClick={() => { history.push('/Favorites') }}>FAVORIS</button>

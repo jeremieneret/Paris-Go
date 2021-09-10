@@ -1,0 +1,7 @@
+@use 'fonts' as *;
+
+h1 {
+    font-family: $lobster;
+    font-size: 38px;
+    // line-height: normal;
+}
