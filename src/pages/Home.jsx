@@ -2,7 +2,7 @@ import axios from 'axios';
 import { Fragment, React, useEffect, useState } from 'react';
 import { GET_LAST_EVENT } from '../tools/api';
 
-import EventCard from './EventCard';
+import EventCard from '../components/EventCard';
 
 
 const Home = () => {
@@ -35,15 +35,15 @@ const Home = () => {
                     </div>
                 </div>
                 <h1 className='actu-title'>C'est tout frais :</h1>
-                <ul className='display-event-cards'>
+                <div className='display-event-cards'>
                     {data?.map((event, i) => {
 
                         return (
-                            <li key={i}>
+                            <div key={i}>
                                 <EventCard
                                     event={{
                                         i: i,
-                                        id: event.record.fields.id,
+                                        id: event.record.id,
                                         title: event.record.fields.title,
                                         cover: event.record.fields.cover_url,
                                         description: event.record.fields.description,
@@ -52,10 +52,10 @@ const Home = () => {
                                         lead_text: event.record.fields.lead_text,
                                     }}
                                 ></EventCard>
-                            </li>
+                            </div>
                         )
                     })}
-                </ul>
+                </div>
             </main>
         </Fragment>
     )

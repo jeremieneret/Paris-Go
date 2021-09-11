@@ -1,6 +1,6 @@
 import { Fragment, React, useEffect, useState } from 'react';
 import axios from 'axios';
-import EventCard from './EventCard';
+import EventCard from '../components/EventCard';
 import Modal from 'react-modal';
 import { customStyles } from '../tools/utils';
 import search from '../assets/search.png';
@@ -35,7 +35,7 @@ const SearchEvent = () => {
 
     }, [searchInputText])
 
-    console.log(data);
+
     return (
         <Fragment>
             <main>
@@ -74,7 +74,7 @@ const SearchEvent = () => {
                                 <EventCard
                                     event={{
                                         i: i,
-                                        id: event.record.fields.id,
+                                        id: event.record.id,
                                         title: event.record.fields.title,
                                         cover: event.record.fields.cover_url,
                                         description: event.record.fields.description,

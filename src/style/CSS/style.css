@@ -27,6 +27,14 @@ main {
   margin: 0 auto;
 }
 
+.block {
+  margin-bottom: 40px;
+}
+
+.miniblock {
+  margin-bottom: 8px;
+}
+
 .pink,
 .orange,
 .yellow,
@@ -39,27 +47,27 @@ main {
 }
 
 .pink {
-  background: #F7AAC6;
+  background: #f7aac6;
 }
 
 .orange {
-  background: #FFBE96;
+  background: #ffbe96;
 }
 
 .yellow {
-  background: #FCFFA4;
+  background: #fcffa4;
 }
 
 .aquamarine {
-  background: #C2EEDC;
+  background: #c2eedc;
 }
 
 .blue {
-  background: #CFE7F5;
+  background: #cfe7f5;
 }
 
 .violet {
-  background: #D6CFF5;
+  background: #d6cff5;
 }
 
 *,
@@ -141,6 +149,15 @@ h1 {
   font-size: 38px;
 }
 
+.date,
+.price,
+.address-name,
+.transport {
+  color: #7a8c9b;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -205,11 +222,6 @@ body {
 .card .favori:hover {
   transform: scale(1.12);
 }
-.card .date {
-  color: #7a8c9b;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
 .card .text {
   padding: 2%;
   width: 100%;
@@ -220,6 +232,65 @@ body {
   overflow: scroll;
   cursor: ns-resize;
   line-height: 140%;
+}
+
+#event-details h1 {
+  color: #3c5d75;
+  font-family: "Rampart One", cursive;
+  padding: 3%;
+}
+#event-details h2 {
+  color: #2c6da0;
+  margin-bottom: 12px;
+}
+#event-details .event-details__card {
+  background: rgba(255, 255, 255, 0.93);
+  border-radius: 50px;
+  margin-bottom: 7vh;
+}
+#event-details .event-details__card:not(.main__card) {
+  padding: 3%;
+}
+#event-details .event-details__card .address-name,
+#event-details .event-details__card .transport {
+  margin-bottom: 2px;
+  color: #2c6da0;
+}
+#event-details .event-details__card .infos {
+  color: #7a8c9b;
+}
+#event-details .event-details__card .inline-infos {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+#event-details .event-details__card .inline-infos img {
+  margin-right: 12px;
+}
+#event-details .side-by-side__card {
+  width: 48%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+#event-details .img-and-title__ctnr {
+  display: flex;
+  align-items: center;
+}
+#event-details .event-details__card__ctnr {
+  display: flex;
+  justify-content: space-between;
+}
+#event-details .cover-xl {
+  width: 50%;
+  height: auto;
+  border-radius: 35px 0 0 35px;
+}
+#event-details .description__card p {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  line-height: 160%;
+  color: #2c6da0;
 }
 
 .nav-content {
@@ -275,14 +346,15 @@ nav button:hover {
   box-shadow: 10px 15px 26px -10px rgba(17, 25, 39, 0.575);
 }
 .search-input__ctnr .search-icon {
-  width: 30px;
-  height: 30px;
-  margin-right: 30px;
+  width: 35px;
+  height: 35px;
+  margin-right: 35px;
 }
 .search-input__ctnr .search-input {
   background: transparent;
   font-size: 30px;
-  color: #ffa3b3;
+  font-weight: 700;
+  color: #FFA5C7;
   width: 100%;
 }
 .search-input__ctnr .search-input::-moz-placeholder {

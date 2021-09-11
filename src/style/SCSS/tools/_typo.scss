@@ -1,7 +1,21 @@
 @use 'fonts' as *;
+@use 'colors' as *;
 
 h1 {
     font-family: $lobster;
     font-size: 38px;
     // line-height: normal;
+}
+
+%p {
+    color: $text-scale2;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.date,
+.price,
+.address-name,
+.transport {
+    @extend %p;
 }

@@ -1,0 +1,68 @@
+@use "../tools/" as *;
+
+#event-details {
+    h1 {
+        color: $text-scale1;
+        font-family: $rampart;
+        padding: 3%;
+    }
+    h2 {
+        color: $text-scale4;
+        margin-bottom: 12px;
+    }
+    .event-details__card {
+        background: rgba($color: #ffffff, $alpha: 0.93);
+        border-radius: 50px;
+        margin-bottom: 7vh;
+        &:not(.main__card) {
+            padding: 3%;
+        }
+        .address-name,
+        .transport {
+            margin-bottom: 2px;
+            color: $text-scale4;
+        }
+        .infos {
+            color: $text-scale2;
+        }
+
+        .inline-infos {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            img {
+                margin-right: 12px;
+            }
+        }
+    }
+
+    .side-by-side__card {
+        width: 48%;
+        height: fit-content;
+    }
+
+    .img-and-title__ctnr {
+        display: flex;
+        align-items: center;
+    }
+
+    .event-details__card__ctnr {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .cover-xl {
+        width: 50%;
+        height: auto;
+        border-radius: 35px 0 0 35px;
+    }
+
+    .description__card {
+        p {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            line-height: 160%;
+            color: $text-scale4;
+        }
+    }
+}

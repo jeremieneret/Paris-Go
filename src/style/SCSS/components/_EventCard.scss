@@ -37,7 +37,7 @@ body {
         text-transform: lowercase;
         font-family: $lobster;
         font-style: italic;
-        color: #7a8c9b
+        color: $text-scale2;
 
     }
     .favori__ctnr {
@@ -47,7 +47,7 @@ body {
     }
     .title {
         font-family: $rampart;
-        color: #2c6da0;
+        color: $text-scale4;
         cursor: pointer;
         transition: all 0.3s;
         text-align: start;
@@ -66,22 +66,15 @@ body {
         }
 
     }
-    .date {
-        color: #7a8c9b;
-        font-weight: 700;
-        margin-bottom: 12px;
-    }
     .text {
         padding: 2%;
         width: 100%;
         .description {
-            color: #3c5d75;
+            color: $text-scale1;
             height: 50%;
             overflow: scroll;
             cursor: ns-resize;
             line-height: 140%;
         }
     }
-
-
 }
