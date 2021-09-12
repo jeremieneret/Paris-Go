@@ -5,6 +5,7 @@ import { GET_LAST_EVENT } from '../tools/api';
 import EventCard from '../components/EventCard';
 
 
+
 const Home = () => {
     const [data, setData] = useState([]);
 

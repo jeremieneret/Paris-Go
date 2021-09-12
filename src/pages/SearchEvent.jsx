@@ -1,27 +1,13 @@
 import { Fragment, React, useEffect, useState } from 'react';
 import axios from 'axios';
 import EventCard from '../components/EventCard';
-import Modal from 'react-modal';
-import { customStyles } from '../tools/utils';
 import search from '../assets/search.png';
 import { SEARCH_EVENTS } from '../tools/api';
-
-Modal.setAppElement('#root');
 
 const SearchEvent = () => {
 
     const [searchInputText, setSearchInputText] = useState([]);
     const [data, setData] = useState();
-
-    const [modalIsOpen, setIsOpen] = useState(false);
-
-    const openModal = () => {
-        setIsOpen(true);
-    }
-
-    const closeModal = () => {
-        setIsOpen(false);
-    }
 
     useEffect(() => {
 
@@ -30,10 +16,17 @@ const SearchEvent = () => {
                 `${SEARCH_EVENTS}${searchInputText}`
             );
             setData(result.data.records);
+
+
         }
         onSearchEvent();
 
     }, [searchInputText])
+
+    console.log(data);
+
+
+
 
 
     return (
@@ -68,7 +61,6 @@ const SearchEvent = () => {
 
                 <ul className='display-event-cards'>
                     {data?.map((event, i) => {
-
                         return (
                             <li key={i}>
                                 <EventCard
@@ -87,16 +79,6 @@ const SearchEvent = () => {
                         )
                     })}
                 </ul>
-                <button onClick={openModal}>Open Modal</button>
-                <Modal
-                    isOpen={modalIsOpen}
-                    onRequestClose={closeModal}
-                    style={customStyles}
-                    contentLabel=""
-                >
-                    <button onClick={closeModal}>retour</button>
-                    <div>I am a modal</div>
-                </Modal>
             </main>
         </Fragment>
     )

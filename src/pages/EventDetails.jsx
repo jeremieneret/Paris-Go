@@ -39,7 +39,6 @@ export default function EventDetails() {
             setTransport(result.data.record.fields.transport);
             setContact_facebook(result.data.record.fields.contact_facebook);
             setContact_phone(result.data.record.fields.contact_phone)
-            console.log(result.data.record.fields);
 
         }
         fetchData();

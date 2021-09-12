@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import SearchEvent from './pages/SearchEvent';
 
 import './style/CSS/style.css'
+import Favorites from './components/Favorites';
 
 
 function App() {
@@ -14,15 +15,15 @@ function App() {
   return (
     <Fragment>
       <Router>
-        <div id="root">
-          <Navbar />
-          <Switch>
-            <Route exact path='/' component={Home} />
-            <Route path='/SearchEvent' component={SearchEvent} />
-            {/* <Route path='/Favorites' component={Favorites} /> */}
-            <Route path='/EventDetails/:id' component={EventDetails} />
-          </Switch>
-        </div>
+          <div id="root">
+            <Navbar />
+            <Switch>
+                <Route exact path='/' component={Home} />
+                <Route path='/EventDetails/:id' component={EventDetails} />
+                <Route path='/SearchEvent' component={SearchEvent} />
+                <Route path='/Favorites' component={Favorites} />
+            </Switch>
+          </div>
       </Router>
     </Fragment>
   );

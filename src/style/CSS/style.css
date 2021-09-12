@@ -239,9 +239,13 @@ body {
   font-family: "Rampart One", cursive;
   padding: 3%;
 }
-#event-details h2 {
+#event-details h2,
+#event-details h3 {
   color: #2c6da0;
   margin-bottom: 12px;
+}
+#event-details a {
+  color: #ee6f14;
 }
 #event-details .event-details__card {
   background: rgba(255, 255, 255, 0.93);

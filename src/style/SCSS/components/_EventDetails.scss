@@ -6,9 +6,13 @@
         font-family: $rampart;
         padding: 3%;
     }
-    h2 {
+    h2,
+    h3 {
         color: $text-scale4;
         margin-bottom: 12px;
+    }
+    a {
+        color: rgb(238, 111, 20);
     }
     .event-details__card {
         background: rgba($color: #ffffff, $alpha: 0.93);
