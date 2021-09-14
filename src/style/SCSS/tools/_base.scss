@@ -1,7 +1,7 @@
 @use 'fonts' as *;
 
 body {
-    background: #dce2e7;
+    background: #092135;
     width: 100vw;
     height: 100vh;
     font-family: $lato;
@@ -10,9 +10,9 @@ body {
         position: fixed;
         height: 100%;
         width: 100%;
-        background: url('../../assets/bckgrnd.jpg');
+        background: url('../../assets/background.jpg');
         background-size: cover;
-        // filter: blur(3px);
+        filter: blur(5px);
         z-index: -1; /* Keep the background behind the content */
         -webkit-background-size: cover; /* pour Chrome et Safari */
         -moz-background-size: cover; /* pour Firefox */

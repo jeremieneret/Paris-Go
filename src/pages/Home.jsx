@@ -35,27 +35,31 @@ const Home = () => {
                         <h2>Allez, go !</h2>
                     </div>
                 </div>
-                <h1 className='actu-title'>C'est tout frais :</h1>
-                <div className='display-event-cards'>
-                    {data?.map((event, i) => {
+                <div className="home-content__ctnr">
+                    <div className="actu-title">
+                        <h1>C'est tout frais :</h1>
+                    </div>
+                    <div className='display-event-cards'>
+                        {data?.map((event, i) => {
 
-                        return (
-                            <div key={i}>
-                                <EventCard
-                                    event={{
-                                        i: i,
-                                        id: event.record.id,
-                                        title: event.record.fields.title,
-                                        cover: event.record.fields.cover_url,
-                                        description: event.record.fields.description,
-                                        date: event.record.fields.date_description,
-                                        tags: event.record.fields.tags,
-                                        lead_text: event.record.fields.lead_text,
-                                    }}
-                                ></EventCard>
-                            </div>
-                        )
-                    })}
+                            return (
+                                <div key={i}>
+                                    <EventCard
+                                        event={{
+                                            i: i,
+                                            id: event.record.id,
+                                            title: event.record.fields.title,
+                                            cover: event.record.fields.cover_url,
+                                            description: event.record.fields.description,
+                                            date: event.record.fields.date_description,
+                                            tags: event.record.fields.tags,
+                                            lead_text: event.record.fields.lead_text,
+                                        }}
+                                    ></EventCard>
+                                </div>
+                            )
+                        })}
+                    </div>
                 </div>
             </main>
         </Fragment>

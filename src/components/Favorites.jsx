@@ -7,33 +7,34 @@ import EventCard from "./EventCard";
 
 const Favorites = () => {
     const recup = localStorage.getItem('paris-events-favorites');
+    // const ids = recup.replace('/"/gm')
 
-    const [idsArray, setIdsArray] = useState([]);
-
-    useEffect(() => {
-        setIdsArray(JSON.stringify(JSON.parse(recup)));
-
-    }, [recup])
-
-    console.log(idsArray);
+    let idsArray = recup ? JSON.parse(recup) : [];
+    // console.log(idsArray);
 
 
-
+    function fetchData() {
+        return Promise.all(
+            idsArray.map((id) => axios.get(`${GET_EVENT_BY_ID}${id}`)
+                .then((response) => response.data))
+        ).then((newIdsArray) => {
+            return newIdsArray;
+        })
+    }
+    const promise = fetchData();
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        const fetchData = async () => {
-            const result = await axios(
-                `${GET_EVENT_BY_ID}${idsArray}`
-            )
-            
-            setData(result.data.records);
-            // console.log(result.data.records);
-        }
-        fetchData();
+        promise.then(data => {
+            setData(data)
+        });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
-    // console.log(data);
+    }, []);
+
+    console.log(data);
+
+
+
     return (
         <Fragment>
             <ul className='display-event-cards'>

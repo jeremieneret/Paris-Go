@@ -8,4 +8,4 @@ export const GET_EVENT_BY_ID =
 
 export const GET_LAST_EVENT =
     API_URL +
-    "catalog/datasets/que-faire-a-paris-/records/?&rows=1&sort=updated_at";
+    "catalog/datasets/que-faire-a-paris-/records/?&rows=1&sort=-updated_at";

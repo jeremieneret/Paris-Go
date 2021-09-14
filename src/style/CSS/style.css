@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Lobster&family=Rampart+One&display=swap");
 body {
-  background: #dce2e7;
+  background: #092135;
   width: 100vw;
   height: 100vh;
   font-family: "Lato", sans-serif;
@@ -11,8 +11,9 @@ body::before {
   position: fixed;
   height: 100%;
   width: 100%;
-  background: url("../../assets/bckgrnd.jpg");
+  background: url("../../assets/background.jpg");
   background-size: cover;
+  filter: blur(5px);
   z-index: -1;
   /* Keep the background behind the content */
   /* pour Chrome et Safari */
@@ -297,6 +298,15 @@ body {
   color: #2c6da0;
 }
 
+.home-content__ctnr {
+  display: flex;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+}
+.home-content__ctnr .display-event-cards {
+  padding: 3%;
+}
+
 .nav-content {
   width: 80%;
   display: flex;
@@ -380,7 +390,6 @@ nav button:hover {
   padding: 3% 5%;
   border-radius: 50px;
   box-shadow: 10px 15px 26px -10px rgba(17, 25, 39, 0.575);
-  line-height: 200%;
 }
 
 .presentation {
@@ -404,6 +413,7 @@ nav button:hover {
 }
 
 .actu-title {
-  color: #9ad9fd;
+  color: #2c6da0;
   background: linear-gradient(90deg, #efff96 10%, rgba(233, 105, 1, 0.4) 100%);
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */

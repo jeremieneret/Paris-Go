@@ -7,7 +7,7 @@ import { SEARCH_EVENTS } from '../tools/api';
 const SearchEvent = () => {
 
     const [searchInputText, setSearchInputText] = useState([]);
-    const [data, setData] = useState();
+    const [data, setData] = useState([]);
 
     useEffect(() => {
 
@@ -22,12 +22,6 @@ const SearchEvent = () => {
         onSearchEvent();
 
     }, [searchInputText])
-
-    console.log(data);
-
-
-
-
 
     return (
         <Fragment>
@@ -58,8 +52,8 @@ const SearchEvent = () => {
                     />
                 </div>
 
-
-                <ul className='display-event-cards'>
+                
+                {data && data.length !== 0 && <ul className='display-event-cards'>
                     {data?.map((event, i) => {
                         return (
                             <li key={i}>
@@ -78,7 +72,11 @@ const SearchEvent = () => {
                             </li>
                         )
                     })}
-                </ul>
+                </ul>}
+                {data.length === 0 && <div>coucou</div>}
+
+
+
             </main>
         </Fragment>
     )

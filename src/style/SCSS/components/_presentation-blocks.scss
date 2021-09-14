@@ -8,7 +8,6 @@
     padding: 3% 5%;
     border-radius: 50px;
     @include shadow;
-    line-height: 200%;
 }
 
 .presentation {
@@ -32,6 +31,7 @@
 }
 
 .actu-title {
-    color: rgb(154, 217, 253);
+    color: $text-scale4;
     background: linear-gradient(90deg, #efff96 10%, rgba(233, 105, 1, 0.4) 100%);
+    align-items: center;
 }
