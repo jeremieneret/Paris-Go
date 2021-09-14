@@ -1,17 +1,15 @@
-@use '../tools' as *;
+@use "../tools" as *;
 
 body {
     display: flex;
     justify-content: center;
 }
 
-
 .card-and-cover__ctnr {
     display: flex;
     margin-top: 3%;
     align-items: center;
     justify-content: center;
-
 }
 .cover {
     width: 120px;
@@ -23,7 +21,7 @@ body {
     cursor: pointer;
     transition: all 0.3s;
     &:hover {
-        transform: scale(1.05)
+        transform: scale(1.05);
     }
 }
 
@@ -38,7 +36,6 @@ body {
         font-family: $lobster;
         font-style: italic;
         color: $text-scale2;
-
     }
     .favori__ctnr {
         display: flex;
@@ -53,18 +50,8 @@ body {
         text-align: start;
         &:hover {
             color: #ffa36b;
-            transform: scale(1.01)
+            transform: scale(1.01);
         }
-    }
-    .favori {
-        height: 40px;
-        width: auto;
-        cursor: pointer;
-        transition: all 0.3s;
-        &:hover {
-            transform: scale(1.12)
-        }
-
     }
     .text {
         padding: 2%;

@@ -1,13 +1,13 @@
 import React, { Fragment } from 'react';
 import parse from 'html-react-parser';
-import coeur_inactive from '../assets/coeur_inactive.png';
 import DisplayColors from '../tools/DisplayColors';
 import { useHistory } from 'react-router';
-import { updateStorage } from '../tools/updateStorage';
+import FavoriteCheckbox from './FavoriteCheckbox';
 
-export default function EventCard({ event }) {
+const EventCard = ({ event }) => {
 
     const history = useHistory();
+
     return (
         <Fragment>
             <div className="card-and-cover__ctnr">
@@ -19,12 +19,11 @@ export default function EventCard({ event }) {
                     <div className='text'>
                         <div className='favori__ctnr'>
                             <p className='tags'>#{event.tags}</p>
-                            <img
-
-                                onClick={() => {
-                                    updateStorage(event.id)
+                            <FavoriteCheckbox
+                                event={{
+                                    id: event.id,
                                 }}
-                                className='favori' src={coeur_inactive} alt='favori' />
+                            />
                         </div>
                         <button
                             onClick={() => { history.push(`/EventDetails/${event.id}`) }}
@@ -39,3 +38,5 @@ export default function EventCard({ event }) {
         </Fragment>
     )
 }
+
+export default EventCard;

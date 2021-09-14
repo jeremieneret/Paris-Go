@@ -1,0 +1,27 @@
+%favorite {
+    &::before {
+        content: '';
+        background-size: 42px;
+        display: inline-block;
+        width: 42px; 
+        height: 42px;
+        content:"";
+    }
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+        transform: scale(1.12);
+    }
+}
+.favorite-falsecolor {
+    @extend %favorite;
+    &::before {
+        background-image: url('../../assets/coeur_inactive.png');
+    }
+}
+.favorite-truecolor {
+    @extend %favorite;
+    &::before {
+        background-image: url('../../assets/coeur.png');
+    }
+}

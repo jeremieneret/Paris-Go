@@ -6,8 +6,10 @@ import parse from 'html-react-parser';
 import facebook from '../assets/facebook.svg';
 import phone from '../assets/phone.svg';
 
+import FavoriteCheckbox from '../components/FavoriteCheckbox';
 
-export default function EventDetails() {
+
+export default function EventDetails({ event }) {
     const { id } = useParams();
     const [title, setTitle] = useState([]);
     const [cover, setCover] = useState([]);
@@ -21,6 +23,7 @@ export default function EventDetails() {
     const [transport, setTransport] = useState([]);
     const [contact_facebook, setContact_facebook] = useState([]);
     const [contact_phone, setContact_phone] = useState([]);
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -38,11 +41,13 @@ export default function EventDetails() {
             setAddress_city(result.data.record.fields.address_city);
             setTransport(result.data.record.fields.transport);
             setContact_facebook(result.data.record.fields.contact_facebook);
-            setContact_phone(result.data.record.fields.contact_phone)
+            setContact_phone(result.data.record.fields.contact_phone);
+            console.log(id);
 
         }
         fetchData();
     }, [id])
+
 
     return (
         <Fragment>
@@ -101,11 +106,14 @@ export default function EventDetails() {
                                 :
                                 <div></div>
                         }
-
-
-
-
-
+                        <div className='block'>
+                            <h2>Ajouter aux favoris :</h2>
+                            <FavoriteCheckbox
+                                event={{
+                                    id: id,
+                                }}
+                            />
+                        </div>
 
                     </div>
                     <div className="event-details__card description__card side-by-side__card">

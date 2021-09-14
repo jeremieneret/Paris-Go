@@ -6,23 +6,28 @@ import { SEARCH_EVENTS } from '../tools/api';
 
 const SearchEvent = () => {
 
-    const [searchInputText, setSearchInputText] = useState([]);
-    const [data, setData] = useState([]);
+    const [searchInputText, setSearchInputText] = useState('');
+    const [data, setData] = useState('');
 
     useEffect(() => {
 
         const onSearchEvent = async () => {
-            const result = await axios(
-                `${SEARCH_EVENTS}${searchInputText}`
-            );
-            setData(result.data.records);
-
-
+            if (searchInputText) {
+                const result = await axios(
+                    `${SEARCH_EVENTS}${searchInputText}`
+                );               
+                setData(result.data.records);
+                console.log(searchInputText);
+            }             
+            else {
+                setData(null)
+            }
         }
         onSearchEvent();
 
     }, [searchInputText])
 
+    
     return (
         <Fragment>
             <main>
@@ -73,7 +78,11 @@ const SearchEvent = () => {
                         )
                     })}
                 </ul>}
-                {data.length === 0 && <div>coucou</div>}
+                {data && data.length === 0 && <div className='message'>
+                    <h2>Ta recherche est vraiment trop personnelle... </h2>
+                    <h2>Essaie autre chose !</h2>
+                </div>}
+                
 
 
 

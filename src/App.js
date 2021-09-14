@@ -7,7 +7,7 @@ import Navbar from './components/Navbar';
 import SearchEvent from './pages/SearchEvent';
 
 import './style/CSS/style.css'
-import Favorites from './components/Favorites';
+import Favorites from './pages/Favorites';
 
 
 function App() {

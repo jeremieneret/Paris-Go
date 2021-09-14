@@ -17,6 +17,7 @@ const Home = () => {
         }
         fetchData();
     }, [])
+    
 
     return (
         <Fragment>

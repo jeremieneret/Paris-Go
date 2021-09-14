@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Lobster&family=Rampart+One&display=swap");
 body {
   background: #092135;
+  color: white;
   width: 100vw;
   height: 100vh;
   font-family: "Lato", sans-serif;
@@ -214,15 +215,6 @@ body {
   color: #ffa36b;
   transform: scale(1.01);
 }
-.card .favori {
-  height: 40px;
-  width: auto;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-.card .favori:hover {
-  transform: scale(1.12);
-}
 .card .text {
   padding: 2%;
   width: 100%;
@@ -249,7 +241,7 @@ body {
   color: #ee6f14;
 }
 #event-details .event-details__card {
-  background: rgba(255, 255, 255, 0.93);
+  background: rgba(255, 255, 255, 0.75);
   border-radius: 50px;
   margin-bottom: 7vh;
 }
@@ -297,6 +289,34 @@ body {
   line-height: 160%;
   color: #2c6da0;
 }
+#event-details .description__card img {
+  width: 100%;
+  border-radius: 35px;
+}
+
+.favorite-truecolor, .favorite-falsecolor {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.favorite-truecolor::before, .favorite-falsecolor::before {
+  content: "";
+  background-size: 42px;
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  content: "";
+}
+.favorite-truecolor:hover, .favorite-falsecolor:hover {
+  transform: scale(1.12);
+}
+
+.favorite-falsecolor::before {
+  background-image: url("../../assets/coeur_inactive.png");
+}
+
+.favorite-truecolor::before {
+  background-image: url("../../assets/coeur.png");
+}
 
 .home-content__ctnr {
   display: flex;
@@ -305,6 +325,14 @@ body {
 }
 .home-content__ctnr .display-event-cards {
   padding: 3%;
+}
+
+.message {
+  background: rgba(245, 245, 245, 0.4);
+  width: 50%;
+  margin: 0 auto;
+  padding: 7%;
+  border-radius: 50px;
 }
 
 .nav-content {

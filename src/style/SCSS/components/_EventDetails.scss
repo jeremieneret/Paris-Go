@@ -15,7 +15,7 @@
         color: rgb(238, 111, 20);
     }
     .event-details__card {
-        background: rgba($color: #ffffff, $alpha: 0.93);
+        background: rgba($color: #ffffff, $alpha: 0.75);
         border-radius: 50px;
         margin-bottom: 7vh;
         &:not(.main__card) {
@@ -67,6 +67,10 @@
             font-size: 1.2rem;
             line-height: 160%;
             color: $text-scale4;
+        }
+        img {
+            width: 100%;
+            border-radius: 35px;
         }
     }
 }
