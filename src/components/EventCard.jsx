@@ -1,12 +1,15 @@
 import React, { Fragment } from 'react';
+import { useHistory } from 'react-router';
 import parse from 'html-react-parser';
 import DisplayColors from '../tools/DisplayColors';
-import { useHistory } from 'react-router';
 import FavoriteCheckbox from './FavoriteCheckbox';
 
+
+//the EventCard is where all the informations about the event are displayed
+//we create a props called 'event' to export its datas in the components that will use the EventCard component.
 const EventCard = ({ event }) => {
 
-
+    //the useHistory() hook allows to navigate between the "pages" of the application. Here we just declare it in a variable.
     const history = useHistory();
 
     return (

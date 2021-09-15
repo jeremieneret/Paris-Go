@@ -9,6 +9,9 @@
     @include shadowNavbar;
     margin-bottom: 7vh;
     border-radius: 0 0 60px 60px;
+    @include media-max($tablet-m) {
+        margin-bottom: 3vh;
+    }
     .nav-content {
         width: 80%;
         display: flex;

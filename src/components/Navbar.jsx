@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 
@@ -8,21 +8,27 @@ const Navbar = () => {
 
     const [menuBtnClassName, setMenuBtnClassName] = useState('menu-btn');
     const [navClassName, setNavClassName] = useState('');
-    let menuOpen = false;
+    const [menuOpen, setMenuOpen] = useState(false);
+    // const [allClassNames, setAllClassNames] = useState('');
 
-
-    const openMenu = () => {
-
+    const handleClassNames = () => {
         if (!menuOpen) {
-            setMenuBtnClassName('menu-btn open');
-            menuOpen = true;
+            setMenuBtnClassName('menu-btn open')
             setNavClassName('open')
         } else {
-            setMenuBtnClassName('menu-btn');
-            menuOpen = false;
+            setMenuBtnClassName('menu-btn')
             setNavClassName('')
         }
-    };
+    }
+
+    useEffect(() => {
+        if (!menuOpen) {
+            setMenuOpen(true)
+        } else {
+            setMenuOpen(false)
+        }
+    }, [])
+
     let history = useHistory();
     return (
         <Fragment>
@@ -32,7 +38,9 @@ const Navbar = () => {
                     <nav
                         className={navClassName}
                     >
-                        <ul>
+                        <ul
+                            onClick={() => setMenuBtnClassName(('menu-btn'))}
+                        >
                             <li>
                                 <button onClick={() => { history.push('/') }}>ACTU</button>
                             </li>
@@ -44,12 +52,19 @@ const Navbar = () => {
                             </li>
                         </ul>
                     </nav>
+
+
                     <div
                         className={menuBtnClassName}
-                        onClick={openMenu}
+                        onClick={() => handleClassNames}
                     >
                         <div className="menu-btn__burger"></div>
                     </div>
+
+
+
+
+
                 </div>
             </div>
         </Fragment>
