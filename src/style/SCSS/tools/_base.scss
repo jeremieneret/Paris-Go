@@ -4,7 +4,7 @@ body {
     background: #092135;
     color: white;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     font-family: $lato;
     &::before {
         content: "";
@@ -24,7 +24,7 @@ body {
 
 main {
     width: 80%;
-    margin: 0 auto;
+    margin: 0 auto 80px auto;
 }
 
 .block {
@@ -35,3 +35,6 @@ main {
     margin-bottom: 8px;
 }
 
+.layout {
+    height: 45vh;
+}

@@ -6,6 +6,7 @@ import FavoriteCheckbox from './FavoriteCheckbox';
 
 const EventCard = ({ event }) => {
 
+
     const history = useHistory();
 
     return (
@@ -18,18 +19,17 @@ const EventCard = ({ event }) => {
                     />
                     <div className='text'>
                         <div className='favori__ctnr'>
-                            <p className='tags'>#{event.tags}</p>
+                            <button
+                                onClick={() => { history.push(`/EventDetails/${event.id}`) }}
+                            >
+                                <h1 className='title'>{event.title}</h1>
+                            </button>
                             <FavoriteCheckbox
                                 event={{
                                     id: event.id,
                                 }}
                             />
                         </div>
-                        <button
-                            onClick={() => { history.push(`/EventDetails/${event.id}`) }}
-                        >
-                            <h1 className='title'>{event.title}</h1>
-                        </button>
                         <p className='date'>{parse(event.date)}</p>
                         <p className="description">{parse(event.lead_text)}</p>
                     </div>

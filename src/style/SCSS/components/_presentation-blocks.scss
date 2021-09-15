@@ -1,17 +1,30 @@
-@use '../tools/' as *;
+@use "../tools/" as *;
 
 .presentation__ctnr {
-    display: flex;
+    @include media-min($desktop-xs) {
+        display: flex;
+    }
+    @include media-max($desktop-xs) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3vh;
+    }
+
 }
 .presentation,
 .actu-title {
     padding: 3% 5%;
     border-radius: 50px;
     @include shadow;
+    @include media-max($desktop-xs) {
+        padding: 10%;
+    }
+    @include media-max($tablet-s) {
+        padding: 15%;
+    }
 }
 
 .presentation {
-    color: white;
     &:nth-of-type(1) {
         background: rgba(166, 219, 250, 0.3);
     }
@@ -26,12 +39,25 @@
     }
     &:not(:nth-of-type(1)) {
         margin-left: 2%;
+        @include media-max($desktop-xs) {
+            margin-left: 0;
+        }
     }
-    margin-bottom: 7vh;
+    @include media-min($desktop-xs) {
+        margin-bottom: 7vh;
+    }
+    @include media-max($desktop-xs) {
+        margin-bottom: 3vh;
+        width: 100%;
+    }
 }
 
 .actu-title {
     color: $text-scale4;
     background: linear-gradient(90deg, #efff96 10%, rgba(233, 105, 1, 0.4) 100%);
+    display: flex;
     align-items: center;
+    @include media-max($desktop-xs) {
+        padding: 3%;
+    }
 }

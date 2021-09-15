@@ -18,6 +18,8 @@ const Home = () => {
         fetchData();
     }, [])
     
+    console.log(data.record);
+
 
     return (
         <Fragment>
@@ -38,7 +40,7 @@ const Home = () => {
                 </div>
                 <div className="home-content__ctnr">
                     <div className="actu-title">
-                        <h1>C'est tout frais :</h1>
+                        <h1>C'est tout frais :</h1>
                     </div>
                     <div className='display-event-cards'>
                         {data?.map((event, i) => {
@@ -53,7 +55,6 @@ const Home = () => {
                                             cover: event.record.fields.cover_url,
                                             description: event.record.fields.description,
                                             date: event.record.fields.date_description,
-                                            tags: event.record.fields.tags,
                                             lead_text: event.record.fields.lead_text,
                                         }}
                                     ></EventCard>

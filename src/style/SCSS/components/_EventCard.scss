@@ -10,6 +10,11 @@ body {
     margin-top: 3%;
     align-items: center;
     justify-content: center;
+    @include media-max($mobile-xl) {
+        width: 95%;
+        flex-direction: column;
+        margin-top: 7vh;
+    }
 }
 .cover {
     width: 120px;
@@ -22,6 +27,11 @@ body {
     transition: all 0.3s;
     &:hover {
         transform: scale(1.05);
+    }
+    @include media-max($mobile-xl) {
+        margin: 0 0 2vh 0;
+        width: 150px;
+        height: 150px;
     }
 }
 
@@ -39,8 +49,8 @@ body {
     }
     .favori__ctnr {
         display: flex;
-        align-items: center;
         justify-content: space-between;
+        margin-bottom: 20px;
     }
     .title {
         font-family: $rampart;
@@ -48,6 +58,7 @@ body {
         cursor: pointer;
         transition: all 0.3s;
         text-align: start;
+        line-height: 110%;
         &:hover {
             color: #ffa36b;
             transform: scale(1.01);

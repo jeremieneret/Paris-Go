@@ -12,6 +12,9 @@
         width: 35px;
         height: 35px;
         margin-right: 35px;
+        @include media-max($mobile-xl) {
+            margin-right: 12px;
+        }
     }
     .search-input {
         background: transparent;
@@ -19,8 +22,14 @@
         font-weight: 700;
         color: #FFA5C7;
         width: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
         &::placeholder {
             color: $text-scale3;
+            @include media-max($mobile-xl) {
+                font-size: 14px;
+                transform: translateY(-6px);
+            }
         }
     }
 }

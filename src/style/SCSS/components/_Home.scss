@@ -1,8 +1,18 @@
+@use '../tools/' as *;
+
 .home-content__ctnr {
-    display: flex;
+    @include media-min($desktop-xs) {
+        display: flex;
+    }
     background: rgba($color: #ffffff, $alpha: 0.3);
     border-radius: 50px;
     .display-event-cards {
-        padding: 3%
+        padding: 7%;
+        @include media-max($desktop-xs) {
+            padding: 3%;
+        }
+    }
+    .card {
+        border-radius: 15px 15px 35px 15px;
     }
 }

@@ -47,7 +47,6 @@ const Favorites = () => {
                                             cover: event.record.fields.cover_url,
                                             description: event.record.fields.description,
                                             date: event.record.fields.date_description,
-                                            tags: event.record.fields.tags,
                                             lead_text: event.record.fields.lead_text,
                                         }}
                                     ></EventCard>
@@ -56,11 +55,12 @@ const Favorites = () => {
                         })}
                     </ul>}
                 {data.length === 0 &&
-                    <div className='message'>
-                        <h2>Tu n'as pas encore de favoris.</h2>
-                        <h2>Ou peut-être que tu n'aimes rien.</h2>
-                        <h2>Après tout, tu es parisien.</h2>
-
+                    <div>
+                        <div className='message'>
+                            <h2>Tu n'as pas encore de favoris.</h2>
+                            <h2>Ou peut-être que tu n'aimes rien.</h2>
+                            <h2>Après tout, tu es parisien.</h2>
+                        </div>
                     </div>
                 }
             </main>

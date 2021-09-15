@@ -4,6 +4,7 @@ import EventCard from '../components/EventCard';
 import search from '../assets/search.png';
 import { SEARCH_EVENTS } from '../tools/api';
 
+
 const SearchEvent = () => {
 
     const [searchInputText, setSearchInputText] = useState('');
@@ -15,10 +16,9 @@ const SearchEvent = () => {
             if (searchInputText) {
                 const result = await axios(
                     `${SEARCH_EVENTS}${searchInputText}`
-                );               
+                );
                 setData(result.data.records);
-                console.log(searchInputText);
-            }             
+            }
             else {
                 setData(null)
             }
@@ -27,7 +27,6 @@ const SearchEvent = () => {
 
     }, [searchInputText])
 
-    
     return (
         <Fragment>
             <main>
@@ -57,7 +56,7 @@ const SearchEvent = () => {
                     />
                 </div>
 
-                
+
                 {data && data.length !== 0 && <ul className='display-event-cards'>
                     {data?.map((event, i) => {
                         return (
@@ -70,7 +69,6 @@ const SearchEvent = () => {
                                         cover: event.record.fields.cover_url,
                                         description: event.record.fields.description,
                                         date: event.record.fields.date_description,
-                                        tags: event.record.fields.tags,
                                         lead_text: event.record.fields.lead_text,
                                     }}
                                 ></EventCard>
@@ -82,9 +80,6 @@ const SearchEvent = () => {
                     <h2>Ta recherche est vraiment trop personnelle... </h2>
                     <h2>Essaie autre chose !</h2>
                 </div>}
-                
-
-
 
             </main>
         </Fragment>

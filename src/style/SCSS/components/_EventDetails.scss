@@ -20,6 +20,9 @@
         margin-bottom: 7vh;
         &:not(.main__card) {
             padding: 3%;
+            @include media-max($desktop-xs) {
+                padding: 5%;
+            }
         }
         .address-name,
         .transport {
@@ -28,6 +31,8 @@
         }
         .infos {
             color: $text-scale2;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .inline-infos {
@@ -43,22 +48,35 @@
     .side-by-side__card {
         width: 48%;
         height: fit-content;
+        @include media-max($desktop-xs) {
+            width: 100%;
+        }
     }
 
     .img-and-title__ctnr {
         display: flex;
         align-items: center;
+        @include media-max($desktop-xs) {
+            flex-direction: column;
+        }
     }
 
     .event-details__card__ctnr {
         display: flex;
         justify-content: space-between;
+        @include media-max($desktop-xs) {
+            flex-direction: column;
+        }
     }
 
     .cover-xl {
         width: 50%;
         height: auto;
         border-radius: 35px 0 0 35px;
+        @include media-max($desktop-xs) {
+            width: 100%;
+            border-radius: 50px 50px 0 0;
+        }
     }
 
     .description__card {

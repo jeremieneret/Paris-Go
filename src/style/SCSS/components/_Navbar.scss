@@ -1,44 +1,141 @@
-@use '../tools' as *;
+@use "../tools" as *;
 
-.nav-content {
-    width: 80%;
-    display: flex;
-}
-
-nav {
+.navbar {
     width: 100vw;
     display: flex;
     justify-content: center;
     padding: 3% 0;
-    background: linear-gradient(90deg, rgba(137, 205, 245, 0.5) 50%, rgba(231, 90, 121, 0.7) 100%);
+    background: linear-gradient(90deg, rgba(137, 245, 240, 0.5) 50%, rgba(231, 90, 121, 0.7) 100%);
     @include shadowNavbar;
     margin-bottom: 7vh;
     border-radius: 0 0 60px 60px;
-    h1 {
-        white-space: nowrap;
-        font-family: $rampart;
-        color: white;
-        font-size: 60px;
-    }
-    ul {
+    .nav-content {
+        width: 80%;
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        justify-content: flex-end;
-        width: 100%;
-        li {
-            margin-left: 30px;
-            button {
-                font-size: large;
-                color: white;
-                font-weight: 700;
-                font-family: $lato;
+
+        h1 {
+            white-space: nowrap;
+            font-family: $rampart;
+            color: white;
+            font-size: 60px;
+            @include media-max($tablet-m) {
+                font-size: 35px;
+            }
+        }
+
+        nav {
+            ul {
+                display: flex;
+                li {
+                    margin-left: 30px;
+                    button {
+                        font-size: large;
+                        font-weight: 700;
+                        font-family: $lato;
+                        transition: transform 0.3s;
+                        color: white;
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+            @include media-max($tablet-m) {
+                display: none;
+            }
+            &.open {
+                display: block;
+                ul {
+                    position: absolute;
+                    top: 7vh;
+                    right: 9.5vw;
+                    display: block;
+                    padding: 1% 2%;
+                    border-radius: 6px 6px 20px 20px;
+                    background: rgba($color: #ffffff, $alpha: 0.4);
+                    animation: fromTheTop 0.3s ease;
+                    li {
+                        margin: 0;
+                        button {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .menu-btn {
+            @include media-min($tablet-m) {
+                display: none;
+            }
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+            transition: all 0.4s ease-in-out;
+            z-index: 3;
+
+            &.open .menu-btn__burger {
+                transform: translateX(-25px);
+                background: transparent;
+                box-shadow: none;
+                &::before {
+                    transform: rotate(45deg) translate(16px, -16px);
+                }
+                &::after {
+                    transform: rotate(-45deg) translate(16px, 16px);
+                }
+            }
+
+            &__burger {
+                width: 25px;
+                height: 3px;
+                background: white;
+                border-radius: 5px;
+                transition: all 0.4s ease-in-out;
+
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 25px;
+                    height: 3px;
+                    background: white;
+                    border-radius: 5px;
+                    transition: all 0.4s ease-in-out;
+                }
+
+                &::before {
+                    transform: translateY(-8px);
+                }
+
+                &::after {
+                    transform: translateY(8px);
+                }
             }
         }
     }
-    button {
-        transition: transform 0.3s;
-        &:hover {
-            transform: scale(1.1)
-        }
+}
+
+@keyframes fromTheTop {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
     }
 }

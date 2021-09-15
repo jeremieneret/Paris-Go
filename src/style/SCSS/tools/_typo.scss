@@ -1,5 +1,6 @@
-@use 'fonts' as *;
-@use 'colors' as *;
+@use "fonts" as *;
+@use "colors" as *;
+@use "breakpoints" as *;
 
 h1 {
     font-family: $lobster;
@@ -18,4 +19,16 @@ h1 {
 .address-name,
 .transport {
     @extend %p;
+}
+
+@include media-max($tablet-m) {
+    h1 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 14px;
+    }
 }

@@ -1,27 +1,59 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 
-export default function Navbar() {
+
+
+const Navbar = () => {
+
+    const [menuBtnClassName, setMenuBtnClassName] = useState('menu-btn');
+    const [navClassName, setNavClassName] = useState('');
+    let menuOpen = false;
+
+
+    const openMenu = () => {
+
+        if (!menuOpen) {
+            setMenuBtnClassName('menu-btn open');
+            menuOpen = true;
+            setNavClassName('open')
+        } else {
+            setMenuBtnClassName('menu-btn');
+            menuOpen = false;
+            setNavClassName('')
+        }
+    };
     let history = useHistory();
     return (
         <Fragment>
-            <nav>
+            <div className='navbar'>
                 <div className="nav-content">
                     <h1>PARIS GO</h1>
-                    <ul>
-                        <li>
-                            <button onClick={() => { history.push('/') }}>ACTU</button>
-                        </li>
-                        <li>
-                            <button onClick={() => { history.push('/SearchEvent') }}>RECHERCHE</button>
-                        </li>
-                        <li>
-                            <button onClick={() => { history.push('/Favorites') }}>FAVORIS</button>
-                        </li>
-                    </ul>
+                    <nav
+                        className={navClassName}
+                    >
+                        <ul>
+                            <li>
+                                <button onClick={() => { history.push('/') }}>ACTU</button>
+                            </li>
+                            <li>
+                                <button onClick={() => { history.push('/SearchEvent') }}>RECHERCHE</button>
+                            </li>
+                            <li>
+                                <button onClick={() => { history.push('/Favorites') }}>FAVORIS</button>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div
+                        className={menuBtnClassName}
+                        onClick={openMenu}
+                    >
+                        <div className="menu-btn__burger"></div>
+                    </div>
                 </div>
-            </nav>
+            </div>
         </Fragment>
     )
 };
+
+export default Navbar
