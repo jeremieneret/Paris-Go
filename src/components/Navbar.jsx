@@ -1,9 +1,6 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
-
-
-
 const Navbar = () => {
 
     const [menuBtnClassName, setMenuBtnClassName] = useState('menu-btn');

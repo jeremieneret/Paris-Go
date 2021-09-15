@@ -6,16 +6,20 @@
     .display-event-cards {
         padding: 7%;
         @include media-max($desktop-xs) {
-            padding: 0;
+            padding: 3%;
         }
     }
     .card {
         border-radius: 15px 15px 35px 15px;
     }
+
     @include media-min($desktop-xs) {
         display: flex;
     }
-    @include media-max($desktop-xs) {
+    @include media-max($tablet-m) {
         background: transparent;
+        .display-event-cards {
+            padding: 0;
+        }
     }
 }

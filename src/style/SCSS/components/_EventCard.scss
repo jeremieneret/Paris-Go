@@ -10,8 +10,8 @@ body {
     margin-top: 3%;
     align-items: center;
     justify-content: center;
-    @include media-max($tablet-m) {
-        width: 95%;
+    @include media-max($mobile-xl) {
+        width: 100%;
         flex-direction: column;
         margin-top: 7vh;
     }
@@ -28,7 +28,7 @@ body {
     &:hover {
         transform: scale(1.05);
     }
-    @include media-max($tablet-m) {
+    @include media-max($mobile-xl) {
         margin: 0 0 2vh 0;
         width: 150px;
         height: 150px;
