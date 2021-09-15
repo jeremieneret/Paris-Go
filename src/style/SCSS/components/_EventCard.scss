@@ -13,7 +13,7 @@ body {
     @include media-max($mobile-xl) {
         width: 100%;
         flex-direction: column;
-        margin-top: 7vh;
+        margin: 4vh 0;
     }
 }
 .cover {

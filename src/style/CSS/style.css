@@ -192,7 +192,7 @@ body {
   .card-and-cover__ctnr {
     width: 100%;
     flex-direction: column;
-    margin-top: 7vh;
+    margin: 4vh 0;
   }
 }
 
@@ -259,14 +259,18 @@ body {
   line-height: 140%;
 }
 
+#event-details {
+  color: #2c6da0;
+}
 #event-details h1 {
   color: #3c5d75;
   font-family: "Rampart One", cursive;
-  padding: 3%;
+  padding: 5%;
 }
 #event-details h2,
-#event-details h3 {
-  color: #2c6da0;
+#event-details h3,
+#event-details b {
+  color: #2c6da0 !important;
   margin-bottom: 12px;
 }
 #event-details a {
@@ -276,6 +280,12 @@ body {
   background: rgba(255, 255, 255, 0.75);
   border-radius: 50px;
   margin-bottom: 7vh;
+}
+@media (max-width: 715px) {
+  #event-details .event-details__card {
+    border-radius: 35px;
+    margin-bottom: 3vh;
+  }
 }
 #event-details .event-details__card:not(.main__card) {
   padding: 3%;
@@ -348,6 +358,11 @@ body {
   font-size: 1.2rem;
   line-height: 160%;
   color: #2c6da0;
+}
+@media (max-width: 715px) {
+  #event-details .description__card p {
+    font-size: 16px;
+  }
 }
 #event-details .description__card img {
   width: 100%;
@@ -424,6 +439,12 @@ body {
   box-shadow: 10px 15px 26px -10px rgba(17, 25, 39, 0.575);
   margin-bottom: 7vh;
   border-radius: 0 0 60px 60px;
+}
+@media (max-width: 850px) {
+  .navbar {
+    margin-bottom: 3vh;
+    border-radius: 0 0 35px 35px;
+  }
 }
 .navbar .nav-content {
   width: 80%;
@@ -653,6 +674,7 @@ body {
   .presentation,
 .actu-title {
     padding: 15%;
+    border-radius: 35px;
   }
 }
 

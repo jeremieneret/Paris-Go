@@ -11,6 +11,7 @@
     border-radius: 0 0 60px 60px;
     @include media-max($tablet-m) {
         margin-bottom: 3vh;
+        border-radius: 0 0 35px 35px;
     }
     .nav-content {
         width: 80%;

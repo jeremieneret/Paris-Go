@@ -1,20 +1,19 @@
 import React, { useState, Fragment, useEffect } from 'react';
 import { updateStorage } from '../tools/updateStorage';
 
-
 const FavoriteCheckbox = ({ event }) => {
+    //we initialize the state of "checked" at false and setChecked will allow us to make the boolean change
     const [checked, setChecked] = useState(false);
 
     useEffect(() => {
-        //on stocke les données présentes dans l'espace créé dans le local
-        //storage "deezweb_jrm" dans une constante.
+        // here we get datas from the local storage
         const storedIds = window.localStorage.getItem("paris-events-favorites");
-        //on crée un tableau vide.
+        //we stock this datas into an array
         let storageArray = [];
-        //quand le tableau comportera des données, elles seront converties en JSON.
         if (storedIds) {
             storageArray = JSON.parse(storedIds);
         }
+        //then we check if the array includes the id of the event
         if (storageArray.includes(event.id)) {
             setChecked(true);
         }
@@ -22,27 +21,29 @@ const FavoriteCheckbox = ({ event }) => {
 
     return (
         <Fragment>
-                            {checked &&
-                                <input
-                                    type="checkbox"
-                                    className='favorite-truecolor'
-                                    checked={checked}
-                                    onChange={e => setChecked(e.target.checked)}
-                                    onClick={() => {
-                                        updateStorage(event.id)
-                                    }}
-                                />}
 
-                            {!checked &&
-                                <input
-                                    type="checkbox"
-                                    className='favorite-falsecolor'
-                                    checked={checked}
-                                    onChange={e => setChecked(e.target.checked)}
-                                    onClick={() => {
-                                        updateStorage(event.id)
-                                    }}
-                                />}
+            {/* if 'checked' is true, then we display the true color (pink), if not, we display the false one (grey) */}
+            {checked &&
+                <input
+                    type="checkbox"
+                    className='favorite-truecolor'
+                    checked={checked}
+                    onChange={e => setChecked(e.target.checked)}
+                    onClick={() => {
+                        updateStorage(event.id)
+                    }}
+                />}
+
+            {!checked &&
+                <input
+                    type="checkbox"
+                    className='favorite-falsecolor'
+                    checked={checked}
+                    onChange={e => setChecked(e.target.checked)}
+                    onClick={() => {
+                        updateStorage(event.id)
+                    }}
+                />}
         </Fragment>
     )
 }

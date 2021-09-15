@@ -1,15 +1,14 @@
-import axios from 'axios';
 import React, { Fragment, useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { GET_EVENT_BY_ID } from '../tools/api';
 import parse from 'html-react-parser';
+import axios from 'axios';
+
+import FavoriteCheckbox from '../components/FavoriteCheckbox';
+import { GET_EVENT_BY_ID } from '../tools/api';
 import facebook from '../assets/facebook.svg';
 import phone from '../assets/phone.svg';
 
-import FavoriteCheckbox from '../components/FavoriteCheckbox';
-
-
-export default function EventDetails({ event }) {
+const EventDetails = ({ event }) => {
     const { id } = useParams();
     const [title, setTitle] = useState([]);
     const [cover, setCover] = useState([]);
@@ -125,3 +124,5 @@ export default function EventDetails({ event }) {
         </Fragment>
     )
 }
+
+export default EventDetails

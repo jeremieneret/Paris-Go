@@ -1,14 +1,16 @@
 @use "../tools/" as *;
 
 #event-details {
+    color: $text-scale4;
     h1 {
         color: $text-scale1;
         font-family: $rampart;
-        padding: 3%;
+        padding: 5%;
     }
     h2,
-    h3 {
-        color: $text-scale4;
+    h3,
+    b {
+        color: $text-scale4 !important;
         margin-bottom: 12px;
     }
     a {
@@ -18,6 +20,10 @@
         background: rgba($color: #ffffff, $alpha: 0.75);
         border-radius: 50px;
         margin-bottom: 7vh;
+        @include media-max($tablet-s) {
+            border-radius: 35px;
+            margin-bottom: 3vh;
+        }
         &:not(.main__card) {
             padding: 3%;
             @include media-max($desktop-xs) {
@@ -85,6 +91,9 @@
             font-size: 1.2rem;
             line-height: 160%;
             color: $text-scale4;
+            @include media-max($tablet-s) {
+                font-size: 16px;
+            }
         }
         img {
             width: 100%;
