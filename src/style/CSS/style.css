@@ -190,7 +190,7 @@ body {
 }
 @media (max-width: 600px) {
   .card-and-cover__ctnr {
-    width: 95%;
+    width: 100%;
     flex-direction: column;
     margin-top: 7vh;
   }
@@ -382,11 +382,6 @@ body {
   background: rgba(255, 255, 255, 0.3);
   border-radius: 50px;
 }
-@media (min-width: 1111px) {
-  .home-content__ctnr {
-    display: flex;
-  }
-}
 .home-content__ctnr .display-event-cards {
   padding: 7%;
 }
@@ -397,6 +392,19 @@ body {
 }
 .home-content__ctnr .card {
   border-radius: 15px 15px 35px 15px;
+}
+@media (min-width: 1111px) {
+  .home-content__ctnr {
+    display: flex;
+  }
+}
+@media (max-width: 850px) {
+  .home-content__ctnr {
+    background: transparent;
+  }
+  .home-content__ctnr .display-event-cards {
+    padding: 0;
+  }
 }
 
 .message {
@@ -621,6 +629,11 @@ body {
     grid-template-columns: repeat(2, 1fr);
     -moz-column-gap: 3vh;
          column-gap: 3vh;
+  }
+}
+@media (max-width: 850px) {
+  .presentation__ctnr {
+    display: block;
   }
 }
 

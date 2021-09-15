@@ -9,6 +9,9 @@
         grid-template-columns: repeat(2, 1fr);
         column-gap: 3vh;
     }
+    @include media-max($tablet-m) {
+        display: block;
+    }
 
 }
 .presentation,

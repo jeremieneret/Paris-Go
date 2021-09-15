@@ -1,9 +1,6 @@
 @use '../tools/' as *;
 
 .home-content__ctnr {
-    @include media-min($desktop-xs) {
-        display: flex;
-    }
     background: rgba($color: #ffffff, $alpha: 0.3);
     border-radius: 50px;
     .display-event-cards {
@@ -14,5 +11,15 @@
     }
     .card {
         border-radius: 15px 15px 35px 15px;
+    }
+
+    @include media-min($desktop-xs) {
+        display: flex;
+    }
+    @include media-max($tablet-m) {
+        background: transparent;
+        .display-event-cards {
+            padding: 0;
+        }
     }
 }
