@@ -32,21 +32,24 @@ const Navbar = () => {
                     <nav
                         className={navClassName}
                     >
-                        <ul
-                            onClick={openMenu}
-                        >
-                            <li>
-                                <button onClick={() => { history.push('/') }}>ACTU</button>
-                            </li>
-                            <li>
-                                <button onClick={() => { history.push('/SearchEvent') }}>RECHERCHE</button>
-                            </li>
-                            <li>
-                                <button onClick={() => { history.push('/Favorites') }}>FAVORIS</button>
-                            </li>
-                        </ul>
-                    </nav>
+                        <div className="desktop">
+                            <ul>
+                                <li><button onClick={() => { history.push('/') }}>ACTU</button></li>
+                                <li><button onClick={() => { history.push('/SearchEvent') }}>RECHERCHE</button></li>
+                                <li><button onClick={() => { history.push('/Favorites') }}>FAVORIS</button></li>
+                            </ul>
+                        </div>
 
+                        <div className="mobile">
+                            <ul
+                                onClick={openMenu}
+                            >
+                                <li><button onClick={() => { history.push('/') }}>ACTU</button></li>
+                                <li><button onClick={() => { history.push('/SearchEvent') }}>RECHERCHE</button></li>
+                                <li><button onClick={() => { history.push('/Favorites') }}>FAVORIS</button></li>
+                            </ul>
+                        </div>
+                    </nav>
 
                     <div
                         className={menuBtnClassName}
@@ -54,11 +57,6 @@ const Navbar = () => {
                     >
                         <div className="menu-btn__burger"></div>
                     </div>
-
-
-
-
-
                 </div>
             </div>
         </Fragment>

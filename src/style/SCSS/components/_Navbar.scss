@@ -68,6 +68,22 @@
                     }
                 }
             }
+            @include media-min($tablet-m) {
+                .mobile {
+                    display: none;
+                }
+                .desktop {
+                    display: flex;
+                }
+            }
+            @include media-max($tablet-m) {
+                .mobile {
+                    display: block;
+                }
+                .desktop {
+                    display: none;
+                }
+            }
         }
 
         .menu-btn {

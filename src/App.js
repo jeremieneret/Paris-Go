@@ -15,7 +15,6 @@ function App() {
   return (
     <Fragment>
       <Router>
-          <div id="root">
             <Navbar />
             <Switch>
                 <Route exact path='/' component={Home} />
@@ -23,7 +22,6 @@ function App() {
                 <Route path='/SearchEvent' component={SearchEvent} />
                 <Route path='/Favorites' component={Favorites} />
             </Switch>
-          </div>
       </Router>
     </Fragment>
   );

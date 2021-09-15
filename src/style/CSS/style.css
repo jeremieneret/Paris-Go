@@ -28,6 +28,11 @@ main {
   width: 80%;
   margin: 0 auto 80px auto;
 }
+@media (min-width: 1441px) {
+  main {
+    max-width: 1200px;
+  }
+}
 
 .block {
   margin-bottom: 40px;
@@ -503,6 +508,22 @@ body {
 }
 .navbar .nav-content nav.open ul li button {
   font-size: 14px;
+}
+@media (min-width: 851px) {
+  .navbar .nav-content nav .mobile {
+    display: none;
+  }
+  .navbar .nav-content nav .desktop {
+    display: flex;
+  }
+}
+@media (max-width: 850px) {
+  .navbar .nav-content nav .mobile {
+    display: block;
+  }
+  .navbar .nav-content nav .desktop {
+    display: none;
+  }
 }
 .navbar .nav-content .menu-btn {
   position: relative;

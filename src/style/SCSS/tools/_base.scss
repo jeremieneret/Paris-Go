@@ -1,4 +1,5 @@
 @use 'fonts' as *;
+@use 'breakpoints' as *;
 
 body {
     background: #092135;
@@ -24,7 +25,11 @@ body {
 
 main {
     width: 80%;
+
     margin: 0 auto 80px auto;
+    @include media-min($desktop-xl) {
+        max-width: 1200px;
+    }
 }
 
 .block {
