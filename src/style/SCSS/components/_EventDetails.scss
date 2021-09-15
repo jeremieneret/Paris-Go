@@ -83,6 +83,10 @@
             width: 100%;
             border-radius: 50px 50px 0 0;
         }
+        @include media-max($tablet-m) {
+            border-radius: 35px 35px 0 0;
+
+        }
     }
 
     .description__card {

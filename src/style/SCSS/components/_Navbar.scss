@@ -27,6 +27,9 @@
             @include media-max($tablet-m) {
                 font-size: 35px;
             }
+            @include media-max($mobile-m) {
+                font-size: 20px;
+            }
         }
 
         nav {
@@ -53,11 +56,11 @@
                 display: block;
                 ul {
                     position: absolute;
-                    top: 7vh;
-                    right: 9.5vw;
+                    top: 0;
+                    right: 17vw;
                     display: block;
-                    padding: 1% 2%;
-                    border-radius: 6px 6px 20px 20px;
+                    padding: 2.5%;
+                    border-radius: 0 0 20px 20px;
                     background: rgba($color: #ffffff, $alpha: 0.4);
                     animation: fromTheTop 0.3s ease;
                     li {

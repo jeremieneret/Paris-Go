@@ -64,4 +64,7 @@
     @include media-max($desktop-xs) {
         padding: 3%;
     }
+    @include media-max($tablet-m) {
+        margin-top: 6vh;
+    }
 }

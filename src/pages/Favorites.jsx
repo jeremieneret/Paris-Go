@@ -5,11 +5,12 @@ import { Fragment } from "react/cjs/react.production.min";
 import { GET_EVENT_BY_ID } from "../tools/api";
 import EventCard from "../components/EventCard";
 
+//we get the datas from localStorage, parse them and put them into an array
 const Favorites = () => {
     const recup = localStorage.getItem('paris-events-favorites');
     let idsArray = recup ? JSON.parse(recup) : [];
 
-
+    //on a first step, we use a Promise method to fetch data from the api and put them into a new array, created by the mapping of the initial one
     function fetchData() {
         return Promise.all(
             idsArray.map((id) => axios.get(`${GET_EVENT_BY_ID}${id}`)
@@ -21,6 +22,7 @@ const Favorites = () => {
     const promise = fetchData();
     const [data, setData] = useState([]);
 
+    //then in a second step, we use UseEffect to set the datas in the 'data' variable that we will use below
     useEffect(() => {
         promise.then(data => {
             setData(data)
@@ -39,6 +41,7 @@ const Favorites = () => {
                         {data?.map((event, i) => {
                             return (
                                 <li key={i}>
+                                    {/* here we are giving to the EventCard the datas needed, using props */}
                                     <EventCard
                                         event={{
                                             i: i,

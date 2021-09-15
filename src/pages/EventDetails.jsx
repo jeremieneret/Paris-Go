@@ -2,7 +2,6 @@ import React, { Fragment, useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import parse from 'html-react-parser';
 import axios from 'axios';
-
 import FavoriteCheckbox from '../components/FavoriteCheckbox';
 import { GET_EVENT_BY_ID } from '../tools/api';
 import facebook from '../assets/facebook.svg';
@@ -41,8 +40,6 @@ const EventDetails = ({ event }) => {
             setTransport(result.data.record.fields.transport);
             setContact_facebook(result.data.record.fields.contact_facebook);
             setContact_phone(result.data.record.fields.contact_phone);
-            console.log(id);
-
         }
         fetchData();
     }, [id])
@@ -80,7 +77,6 @@ const EventDetails = ({ event }) => {
                                 :
                                 <div></div>}
                         </div>
-
                         {
                             contact_facebook || contact_phone ?
                                 <div className="block">
@@ -113,14 +109,12 @@ const EventDetails = ({ event }) => {
                                 }}
                             />
                         </div>
-
                     </div>
                     <div className="event-details__card description__card side-by-side__card">
                         {description}
                     </div>
                 </div>
             </main>
-
         </Fragment>
     )
 }

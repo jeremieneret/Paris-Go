@@ -1,7 +1,7 @@
 //on crée une fonction qu'on nomme "updateStorage" avec "id" en paramètre.
 export const updateStorage = id => {
     //on stocke les données présentes dans l'espace créé dans le local
-    //storage "deezweb_jrm" dans une constante.
+    //storage "paris-events-favorites" dans une constante.
     const storedIds = window.localStorage.getItem("paris-events-favorites");
     //on crée un tableau vide.
     let storageArray = [];

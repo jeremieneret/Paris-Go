@@ -5,10 +5,11 @@ import { GET_LAST_EVENT } from '../tools/api';
 import EventCard from '../components/EventCard';
 
 
-
+//we use useState to create a variable 'data' and a function 'setData' to update the state of 'data'. We initialize the state of 'data' as an empty array.
 const Home = () => {
     const [data, setData] = useState([]);
 
+    //we use useEffect to fetch datas from the api and set the result in the 'data' array
     useEffect(() => {
         const fetchData = async () => {
             const result = await axios(
@@ -18,9 +19,6 @@ const Home = () => {
         fetchData();
     }, [])
     
-    console.log(data.record);
-
-
     return (
         <Fragment>
             <main className="home">
@@ -44,7 +42,6 @@ const Home = () => {
                     </div>
                     <div className='display-event-cards'>
                         {data?.map((event, i) => {
-
                             return (
                                 <div key={i}>
                                     <EventCard

@@ -205,7 +205,7 @@ body {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  margin-right: 3%;
+  margin-right: 3vw;
   box-shadow: 10px 15px 26px -10px rgba(17, 25, 39, 0.575);
   border: solid 3px white;
   cursor: pointer;
@@ -358,6 +358,11 @@ body {
     border-radius: 50px 50px 0 0;
   }
 }
+@media (max-width: 850px) {
+  #event-details .cover-xl {
+    border-radius: 35px 35px 0 0;
+  }
+}
 #event-details .description__card p {
   margin-bottom: 15px;
   font-size: 1.2rem;
@@ -403,11 +408,19 @@ body {
   border-radius: 50px;
 }
 .home-content__ctnr .display-event-cards {
-  padding: 7%;
+  padding: 3vw;
 }
 @media (max-width: 1110px) {
   .home-content__ctnr .display-event-cards {
-    padding: 3%;
+    padding: 3vw;
+  }
+}
+.home-content__ctnr .display-event-cards .card-and-cover__ctnr {
+  margin: 0;
+}
+@media (max-width: 850px) {
+  .home-content__ctnr .display-event-cards .card-and-cover__ctnr {
+    margin-top: 3vh;
   }
 }
 .home-content__ctnr .card {
@@ -468,6 +481,11 @@ body {
     font-size: 35px;
   }
 }
+@media (max-width: 440px) {
+  .navbar .nav-content h1 {
+    font-size: 20px;
+  }
+}
 .navbar .nav-content nav ul {
   display: flex;
 }
@@ -494,11 +512,11 @@ body {
 }
 .navbar .nav-content nav.open ul {
   position: absolute;
-  top: 7vh;
-  right: 9.5vw;
+  top: 0;
+  right: 17vw;
   display: block;
-  padding: 1% 2%;
-  border-radius: 6px 6px 20px 20px;
+  padding: 2.5%;
+  border-radius: 0 0 20px 20px;
   background: rgba(255, 255, 255, 0.4);
   -webkit-animation: fromTheTop 0.3s ease;
           animation: fromTheTop 0.3s ease;
@@ -740,5 +758,10 @@ body {
 @media (max-width: 1110px) {
   .actu-title {
     padding: 3%;
+  }
+}
+@media (max-width: 850px) {
+  .actu-title {
+    margin-top: 6vh;
   }
 }/*# sourceMappingURL=style.css.map */
