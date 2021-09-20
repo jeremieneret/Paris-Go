@@ -23,9 +23,9 @@
         h1 {
             white-space: nowrap;
             font-family: $montserrat;
-            color: #446a80;
+            color: $text-scale4;
             font-size: 60px;
-            font-weight: 200;
+            font-weight: 500;
             @include media-max($tablet-m) {
                 font-size: 35px;
             }

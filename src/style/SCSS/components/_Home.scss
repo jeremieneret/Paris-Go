@@ -15,7 +15,7 @@
                 margin-top: 3vh;
             }
             @include media-between($mobile-xl, $tablet-m) {
-                margin: 0 0 0 3vh;
+                margin: 0 0 0 30px;
             }
         }
     }
