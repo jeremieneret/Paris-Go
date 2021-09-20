@@ -3,8 +3,10 @@
 @use "breakpoints" as *;
 
 h1 {
-    font-family: $lobster;
-    font-size: 38px;
+    font-family: $montserrat;
+    font-size: 32px;
+    font-weight: 300;
+    text-transform: uppercase;
     // line-height: normal;
 }
 

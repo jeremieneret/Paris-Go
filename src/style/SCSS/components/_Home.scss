@@ -2,30 +2,50 @@
 
 .home-content__ctnr {
     background: rgba($color: #ffffff, $alpha: 0.3);
-    border-radius: 50px;
+    border-radius: 20px 20px 50px 20px;
+    @include media-max($tablet-m) {
+        border-radius: 10px 10px 60px 10px;
+    }
+    @include shadow;
     .display-event-cards {
-        padding: 3vw;
-        @include media-max($desktop-xs) {
-            padding: 3vw;
-        }
+        padding: 3vw 0 0 3vw;
         .card-and-cover__ctnr {
             margin: 0;
             @include media-max($tablet-m) {
                 margin-top: 3vh;
             }
+            @include media-between($mobile-xl, $tablet-m) {
+                margin: 0 0 0 3vh;
+            }
         }
     }
     .card {
-        border-radius: 15px 15px 35px 15px;
+        border-radius: 15px 0 35px 0;
+        box-shadow: 0 0 0 transparent;
+        @include media-max($tablet-m) {
+            border-radius: 0 0 60px 10px;
+        }
     }
 
-    @include media-min($desktop-xs) {
-        display: flex;
+    .pink {
+        border-radius: 15px 0 0 0 ;
+        @include media-max($tablet-m) {
+            border-radius: 0 0 0 10px;
+        }
     }
+
+    // @include media-min($desktop-xs) {
+    //     display: flex;
+    // }
     @include media-max($tablet-m) {
         background: transparent;
         .display-event-cards {
             padding: 0;
+        }
+    }
+    @include media-max($mobile-xl) {
+        span {
+            color: white;
         }
     }
 }

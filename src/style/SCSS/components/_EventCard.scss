@@ -43,7 +43,7 @@ body {
     @include shadow;
     .tags {
         text-transform: lowercase;
-        font-family: $lobster;
+        font-family: $montserrat;
         font-style: italic;
         color: $text-scale2;
     }
@@ -53,7 +53,7 @@ body {
         margin-bottom: 20px;
     }
     .title {
-        font-family: $rampart;
+        font-family: $montserrat;
         color: $text-scale4;
         cursor: pointer;
         transition: all 0.3s;

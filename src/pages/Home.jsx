@@ -24,7 +24,7 @@ const Home = () => {
             <main className="home">
                 <div className="presentation__ctnr">
                     <div className="presentation">
-                        <h1>À toi les meilleures idées de sorties !</h1>
+                        <h1>À toi les meilleures idées de sorties !</h1>
                     </div>
                     <div className="presentation">
                         <h2>Soit le premier au courant du dernier événement publié sur cette page, ou bien utilise la page Recherche, pour une recherche d'événement plus spécifique.</h2>
@@ -38,7 +38,7 @@ const Home = () => {
                 </div>
                 <div className="home-content__ctnr">
                     <div className="actu-title">
-                        <h1>C'est tout frais :</h1>
+                        <h1>C'est tout <span>frais :</span></h1>
                     </div>
                     <div className='display-event-cards'>
                         {data?.map((event, i) => {

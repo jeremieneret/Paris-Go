@@ -12,25 +12,36 @@
     @include media-max($tablet-m) {
         display: block;
     }
-
 }
 .presentation,
 .actu-title {
     padding: 3% 5%;
-    border-radius: 50px;
-    @include shadow;
     @include media-max($desktop-xs) {
         padding: 10%;
     }
-    @include media-max($tablet-s) {
+    @include media-max($tablet-m) {
         padding: 15%;
-        border-radius: 35px;
     }
 }
 
 .presentation {
+    border-radius: 20px 20px 50px 20px;
+    @include media-max($tablet-m) {
+        border-radius: 10px 10px 60px 10px;
+    }
+    @include shadow;
+
+    h1 {
+        font-weight: 600;
+        font-style: italic;
+    }
     &:nth-of-type(1) {
-        background: rgba(166, 219, 250, 0.3);
+        background-image: url("../../assets/paris.png");
+        background-size: cover;
+        background-position-x: right;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
     }
     &:nth-of-type(2) {
         background: rgba(132, 106, 246, 0.3);
@@ -57,7 +68,10 @@
 }
 
 .actu-title {
-    color: $text-scale4;
+    border-radius: 20px 20px 0 0;
+    font-style: italic;
+    font-weight: 500;
+    color: rgb(255, 137, 156);
     background: linear-gradient(90deg, #efff96 10%, rgba(233, 105, 1, 0.4) 100%);
     display: flex;
     align-items: center;
@@ -66,5 +80,13 @@
     }
     @include media-max($tablet-m) {
         margin-top: 6vh;
+        border-radius: 10px 10px 0 0;
+        padding: 6%;
+        background: linear-gradient(90deg, #efff96 40%, #e694b2 100%);
+    }
+    @include media-max($mobile-xl) {
+        h1 {
+            font-size: 7vw;
+        }
     }
 }

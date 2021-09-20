@@ -4,9 +4,9 @@
     display: flex;
     padding: 3% 5%;
     border-radius: 20px;
-    background: rgba($color: #ffffff, $alpha: 0.3);
+    background: rgba($color: #ffffff, $alpha: 0.2);
     width: 100%;
-    margin-bottom: 3vh;
+    margin: 4vh 0;
     @include shadow;
     .search-icon {
         width: 35px;
@@ -20,12 +20,12 @@
         background: transparent;
         font-size: 30px;
         font-weight: 700;
-        color: #FFA5C7;
+        color: white;
         width: 100%;
         text-overflow: ellipsis;
         overflow: hidden;
         &::placeholder {
-            color: $text-scale3;
+            color: white;
             @include media-max($mobile-xl) {
                 font-size: 14px;
                 transform: translateY(-6px);
