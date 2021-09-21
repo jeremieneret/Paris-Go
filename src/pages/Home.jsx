@@ -15,10 +15,10 @@ const Home = () => {
             const result = await axios(
                 GET_LAST_EVENT)
             setData(result.data.records)
+            console.log(result.data);
         }
         fetchData();
     }, [])
-    
     return (
         <Fragment>
             <main className="home">

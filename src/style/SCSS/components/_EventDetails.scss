@@ -6,6 +6,9 @@
         color: $text-scale1;
         font-family: $montserrat;
         padding: 5%;
+        @include media-max($desktop-xs) {
+            text-align: center;
+        }
     }
     h2,
     h3,
@@ -52,10 +55,18 @@
     }
 
     .side-by-side__card {
-        width: 48%;
         height: fit-content;
+        &:nth-of-type(1) {
+            width: 64%;
+        }
+        &:nth-of-type(2) {
+            width: 34%;
+        }
         @include media-max($desktop-xs) {
-            width: 100%;
+            &:nth-of-type(1),
+            &:nth-of-type(2) {
+                width: 100%;
+            }
         }
     }
 
@@ -76,15 +87,12 @@
     }
 
     .cover-xl {
-        width: 50%;
+        width: 65%;
         height: auto;
         border-radius: 20px 0 0 20px;
         @include media-max($desktop-xs) {
             width: 100%;
-        }
-        @include media-max($tablet-m) {
             border-radius: 15px 15px 0 0;
-
         }
     }
 

@@ -200,9 +200,14 @@ button {
 
 h1 {
   font-family: "Montserrat", sans-serif;
-  font-size: 32px;
+  font-size: 1.5vw;
   font-weight: 300;
   text-transform: uppercase;
+}
+@media (max-width: 1110px) {
+  h1 {
+    font-size: 3vw;
+  }
 }
 
 .date,
@@ -215,10 +220,6 @@ h1 {
 }
 
 @media (max-width: 850px) {
-  h1 {
-    font-size: 30px;
-  }
-
   h2 {
     font-size: 20px;
   }
@@ -317,6 +318,11 @@ body {
   font-family: "Montserrat", sans-serif;
   padding: 5%;
 }
+@media (max-width: 1110px) {
+  #event-details h1 {
+    text-align: center;
+  }
+}
 #event-details h2,
 #event-details h3,
 #event-details b {
@@ -364,13 +370,18 @@ body {
   margin-right: 12px;
 }
 #event-details .side-by-side__card {
-  width: 48%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
+#event-details .side-by-side__card:nth-of-type(1) {
+  width: 64%;
+}
+#event-details .side-by-side__card:nth-of-type(2) {
+  width: 34%;
+}
 @media (max-width: 1110px) {
-  #event-details .side-by-side__card {
+  #event-details .side-by-side__card:nth-of-type(1), #event-details .side-by-side__card:nth-of-type(2) {
     width: 100%;
   }
 }
@@ -393,17 +404,13 @@ body {
   }
 }
 #event-details .cover-xl {
-  width: 50%;
+  width: 65%;
   height: auto;
   border-radius: 20px 0 0 20px;
 }
 @media (max-width: 1110px) {
   #event-details .cover-xl {
     width: 100%;
-  }
-}
-@media (max-width: 850px) {
-  #event-details .cover-xl {
     border-radius: 15px 15px 0 0;
   }
 }
@@ -504,30 +511,6 @@ body {
   }
 }
 
-#magnifying-glass {
-  font-size: 3em;
-  display: inline-block;
-  width: 0.4em;
-  box-sizing: content-box;
-  height: 0.4em;
-  border: 0.1em solid white;
-  position: relative;
-  border-radius: 0.35em;
-  margin-right: 3rem;
-}
-#magnifying-glass::before {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  right: -0.25em;
-  bottom: -0.1em;
-  border-width: 0;
-  background: white;
-  width: 0.35em;
-  height: 0.08em;
-  transform: rotate(45deg);
-}
-
 .message {
   background: rgba(245, 245, 245, 0.4);
   width: 50%;
@@ -541,7 +524,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 3% 0;
-  background: linear-gradient(90deg, rgba(255, 245, 110, 0.561) 50%, rgba(231, 90, 121, 0.7) 100%);
+  background: linear-gradient(90deg, rgba(255, 245, 110, 0.8) 50%, rgba(231, 90, 121, 0.7) 100%);
   box-shadow: 10px 15px 26px -10px rgba(17, 25, 39, 0.4);
   margin-bottom: 7vh;
   border-radius: 0 0 60px 0;

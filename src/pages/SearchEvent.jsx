@@ -46,7 +46,7 @@ const SearchEvent = () => {
                 </div>
 
                 <div className="search-input__ctnr">
-                    <div id="magnifying-glass"></div>
+                    <img className='search-icon' src={search} alt="icone de recherche" />
                     <input
                         className='search-input'
                         onChange={e => setSearchInputText(e.target.value)}

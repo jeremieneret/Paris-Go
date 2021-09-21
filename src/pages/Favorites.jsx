@@ -30,8 +30,6 @@ const Favorites = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    console.log(data);
-
 
     return (
         <Fragment>
