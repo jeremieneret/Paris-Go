@@ -10,6 +10,12 @@ h1 {
     @include media-max($desktop-xs) {
         font-size: 3vw;
     }
+    @include media-max($tablet-m) {
+        font-size: 4vw;
+    }
+    @include media-max($mobile-l) {
+        font-size: 5vw;
+    }
 }
 
 %p {

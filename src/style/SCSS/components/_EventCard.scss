@@ -36,10 +36,13 @@ body {
 }
 
 .card {
-    width: 100%;
+    width: 75%;
     display: flex;
     background: rgb(250, 241, 242);
     border-radius: 15px;
+    @include media-max($mobile-xl) {
+        width: 100%;
+    }
     @include shadow;
     .tags {
         text-transform: lowercase;
@@ -65,7 +68,7 @@ body {
         }
     }
     .text {
-        padding: 2%;
+        padding: 3%;
         width: 100%;
         .description {
             color: $text-scale1;

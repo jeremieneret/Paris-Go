@@ -1,3 +1,5 @@
+@use '../tools/' as *;
+
 %favorite {
     &::before {
         content: '';
@@ -6,6 +8,13 @@
         width: 42px; 
         height: 42px;
         content:"";
+        @include media-max($tablet-m) {
+            width: 4vw;
+            height: 100%;
+        }
+        @include media-max($mobile-l) {
+            width: 5vw;
+        }
     }
     cursor: pointer;
     transition: all 0.3s;
@@ -23,5 +32,7 @@
     @extend %favorite;
     &::before {
         background-image: url('../../assets/coeur.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
     }
 }
