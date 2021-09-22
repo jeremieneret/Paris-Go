@@ -1,7 +1,6 @@
 @use "../tools" as *;
 
 .navbar {
-    width: 100vw;
     display: flex;
     justify-content: center;
     padding: 3% 0;
@@ -13,6 +12,9 @@
         margin-bottom: 3vh;
         border-radius: 0;
         padding: 6% 0;
+    }
+    @include media-min($mobile-m) {
+        width: 100vw;
     }
     .nav-content {
         width: 80%;

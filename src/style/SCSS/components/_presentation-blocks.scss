@@ -25,9 +25,9 @@
 }
 
 .presentation {
-    border-radius: 20px 20px 50px 20px;
+    border-radius: 10px 20px 50px 20px;
     @include media-max($tablet-m) {
-        border-radius: 10px 10px 60px 10px;
+        border-radius: 5px 10px 60px 10px;
     }
     @include shadow;
 
@@ -68,7 +68,7 @@
 }
 
 .actu-title {
-    border-radius: 20px 20px 0 0;
+    border-radius: 10px 20px 0 0;
     font-style: italic;
     font-weight: 500;
     color: rgb(255, 137, 156);

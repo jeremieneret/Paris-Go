@@ -451,11 +451,12 @@ body {
 }
 .favorite-truecolor::before, .favorite-falsecolor::before {
   content: "";
-  background-size: 42px;
   display: inline-block;
   width: 42px;
   height: 42px;
   content: "";
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 @media (max-width: 850px) {
   .favorite-truecolor::before, .favorite-falsecolor::before {
@@ -478,13 +479,11 @@ body {
 
 .favorite-truecolor::before {
   background-image: url("../../assets/coeur.png");
-  background-size: 100%;
-  background-repeat: no-repeat;
 }
 
 .home-content__ctnr {
   background: rgba(255, 255, 255, 0.3);
-  border-radius: 20px 20px 50px 20px;
+  border-radius: 10px 20px 50px 20px;
   box-shadow: 10px 15px 26px -10px rgba(17, 25, 39, 0.4);
 }
 @media (max-width: 850px) {
@@ -510,7 +509,7 @@ body {
 }
 .home-content__ctnr .card {
   width: 100%;
-  border-radius: 15px 0 35px 0;
+  border-radius: 10px 0 35px 0;
   box-shadow: 0 0 0 transparent;
 }
 @media (max-width: 850px) {
@@ -519,7 +518,7 @@ body {
   }
 }
 .home-content__ctnr .pink {
-  border-radius: 15px 0 0 0;
+  border-radius: 10px 0 0 0;
 }
 @media (max-width: 850px) {
   .home-content__ctnr .pink {
@@ -549,7 +548,6 @@ body {
 }
 
 .navbar {
-  width: 100vw;
   display: flex;
   justify-content: center;
   padding: 3% 0;
@@ -563,6 +561,11 @@ body {
     margin-bottom: 3vh;
     border-radius: 0;
     padding: 6% 0;
+  }
+}
+@media (min-width: 441px) {
+  .navbar {
+    width: 100vw;
   }
 }
 .navbar .nav-content {
@@ -794,12 +797,12 @@ body {
 }
 
 .presentation {
-  border-radius: 20px 20px 50px 20px;
+  border-radius: 10px 20px 50px 20px;
   box-shadow: 10px 15px 26px -10px rgba(17, 25, 39, 0.4);
 }
 @media (max-width: 850px) {
   .presentation {
-    border-radius: 10px 10px 60px 10px;
+    border-radius: 5px 10px 60px 10px;
   }
 }
 .presentation h1 {
@@ -844,7 +847,7 @@ body {
 }
 
 .actu-title {
-  border-radius: 20px 20px 0 0;
+  border-radius: 10px 20px 0 0;
   font-style: italic;
   font-weight: 500;
   color: #ff899c;

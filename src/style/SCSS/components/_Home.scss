@@ -2,7 +2,7 @@
 
 .home-content__ctnr {
     background: rgba($color: #ffffff, $alpha: 0.3);
-    border-radius: 20px 20px 50px 20px;
+    border-radius: 10px 20px 50px 20px;
     @include media-max($tablet-m) {
         border-radius: 10px 10px 60px 10px;
     }
@@ -21,7 +21,7 @@
     }
     .card {
         width: 100%;
-        border-radius: 15px 0 35px 0;
+        border-radius: 10px 0 35px 0;
         box-shadow: 0 0 0 transparent;
         @include media-max($tablet-m) {
             border-radius: 0 0 60px 10px;
@@ -29,7 +29,7 @@
     }
 
     .pink {
-        border-radius: 15px 0 0 0 ;
+        border-radius: 10px 0 0 0 ;
         @include media-max($tablet-m) {
             border-radius: 0 0 0 10px;
         }
